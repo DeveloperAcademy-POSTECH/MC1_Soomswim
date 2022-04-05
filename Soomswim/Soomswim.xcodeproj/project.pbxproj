@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A68F45227FBF3470015639B /* Tanny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68F45127FBF3470015639B /* Tanny.swift */; };
+		4A68F45427FBF34E0015639B /* Dinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68F45327FBF34E0015639B /* Dinner.swift */; };
+		4A68F45627FBF35F0015639B /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68F45527FBF35F0015639B /* Key.swift */; };
+		4A68F45827FBF3640015639B /* Jerry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68F45727FBF3640015639B /* Jerry.swift */; };
+		4A68F45A27FBF3680015639B /* Lizzy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68F45927FBF3680015639B /* Lizzy.swift */; };
+		4A68F45C27FBF36E0015639B /* Eddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68F45B27FBF36E0015639B /* Eddy.swift */; };
 		4A876DF127FBEBB5000DBE68 /* SoomswimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A876DF027FBEBB5000DBE68 /* SoomswimApp.swift */; };
 		4A876DF327FBEBB5000DBE68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A876DF227FBEBB5000DBE68 /* ContentView.swift */; };
 		4A876DF527FBEBB6000DBE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A876DF427FBEBB6000DBE68 /* Assets.xcassets */; };
@@ -14,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A68F45127FBF3470015639B /* Tanny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tanny.swift; sourceTree = "<group>"; };
+		4A68F45327FBF34E0015639B /* Dinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dinner.swift; sourceTree = "<group>"; };
+		4A68F45527FBF35F0015639B /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		4A68F45727FBF3640015639B /* Jerry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jerry.swift; sourceTree = "<group>"; };
+		4A68F45927FBF3680015639B /* Lizzy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lizzy.swift; sourceTree = "<group>"; };
+		4A68F45B27FBF36E0015639B /* Eddy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eddy.swift; sourceTree = "<group>"; };
 		4A876DED27FBEBB5000DBE68 /* Soomswim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soomswim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A876DF027FBEBB5000DBE68 /* SoomswimApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoomswimApp.swift; sourceTree = "<group>"; };
 		4A876DF227FBEBB5000DBE68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +44,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A68F44B27FBF31B0015639B /* Eddy */ = {
+			isa = PBXGroup;
+			children = (
+				4A68F45B27FBF36E0015639B /* Eddy.swift */,
+			);
+			path = Eddy;
+			sourceTree = "<group>";
+		};
+		4A68F44C27FBF3210015639B /* Lizzy */ = {
+			isa = PBXGroup;
+			children = (
+				4A68F45927FBF3680015639B /* Lizzy.swift */,
+			);
+			path = Lizzy;
+			sourceTree = "<group>";
+		};
+		4A68F44D27FBF3250015639B /* Jerry */ = {
+			isa = PBXGroup;
+			children = (
+				4A68F45727FBF3640015639B /* Jerry.swift */,
+			);
+			path = Jerry;
+			sourceTree = "<group>";
+		};
+		4A68F44E27FBF32C0015639B /* Key */ = {
+			isa = PBXGroup;
+			children = (
+				4A68F45527FBF35F0015639B /* Key.swift */,
+			);
+			path = Key;
+			sourceTree = "<group>";
+		};
+		4A68F44F27FBF3340015639B /* Dinner */ = {
+			isa = PBXGroup;
+			children = (
+				4A68F45327FBF34E0015639B /* Dinner.swift */,
+			);
+			path = Dinner;
+			sourceTree = "<group>";
+		};
+		4A68F45027FBF3390015639B /* Tanny */ = {
+			isa = PBXGroup;
+			children = (
+				4A68F45127FBF3470015639B /* Tanny.swift */,
+			);
+			path = Tanny;
+			sourceTree = "<group>";
+		};
 		4A876DE427FBEBB5000DBE68 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +111,12 @@
 		4A876DEF27FBEBB5000DBE68 /* Soomswim */ = {
 			isa = PBXGroup;
 			children = (
+				4A68F45027FBF3390015639B /* Tanny */,
+				4A68F44F27FBF3340015639B /* Dinner */,
+				4A68F44E27FBF32C0015639B /* Key */,
+				4A68F44D27FBF3250015639B /* Jerry */,
+				4A68F44C27FBF3210015639B /* Lizzy */,
+				4A68F44B27FBF31B0015639B /* Eddy */,
 				4A876DF027FBEBB5000DBE68 /* SoomswimApp.swift */,
 				4A876DF227FBEBB5000DBE68 /* ContentView.swift */,
 				4A876DF427FBEBB6000DBE68 /* Assets.xcassets */,
@@ -138,7 +204,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A876DF327FBEBB5000DBE68 /* ContentView.swift in Sources */,
+				4A68F45627FBF35F0015639B /* Key.swift in Sources */,
+				4A68F45827FBF3640015639B /* Jerry.swift in Sources */,
+				4A68F45C27FBF36E0015639B /* Eddy.swift in Sources */,
+				4A68F45A27FBF3680015639B /* Lizzy.swift in Sources */,
 				4A876DF127FBEBB5000DBE68 /* SoomswimApp.swift in Sources */,
+				4A68F45227FBF3470015639B /* Tanny.swift in Sources */,
+				4A68F45427FBF34E0015639B /* Dinner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
