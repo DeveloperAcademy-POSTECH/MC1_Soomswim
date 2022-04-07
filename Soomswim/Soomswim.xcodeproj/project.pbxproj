@@ -17,6 +17,7 @@
 		4A876DF527FBEBB6000DBE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A876DF427FBEBB6000DBE68 /* Assets.xcassets */; };
 		4A876DF827FBEBB6000DBE68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A876DF727FBEBB6000DBE68 /* Preview Assets.xcassets */; };
 		8406950C27FE7602006934C5 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406950B27FE7602006934C5 /* Login.swift */; };
+		8493936C27FF3D7D00D186E4 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493936B27FF3D7D00D186E4 /* LaunchScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		4A876DF427FBEBB6000DBE68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A876DF727FBEBB6000DBE68 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8406950B27FE7602006934C5 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		8493936B27FF3D7D00D186E4 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				8406950B27FE7602006934C5 /* Login.swift */,
+				8493936B27FF3D7D00D186E4 /* LaunchScreen.swift */,
 			);
 			path = Tanny;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			files = (
 				4A876DF327FBEBB5000DBE68 /* ContentView.swift in Sources */,
 				4A68F45627FBF35F0015639B /* Key.swift in Sources */,
+				8493936C27FF3D7D00D186E4 /* LaunchScreen.swift in Sources */,
 				4A68F45827FBF3640015639B /* Jerry.swift in Sources */,
 				4A68F45C27FBF36E0015639B /* Eddy.swift in Sources */,
 				4A68F45A27FBF3680015639B /* Lizzy.swift in Sources */,
