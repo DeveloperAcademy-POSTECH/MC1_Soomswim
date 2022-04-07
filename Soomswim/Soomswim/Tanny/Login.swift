@@ -30,13 +30,36 @@ struct Login: View {
 
 struct LogoEnglish: View {
     var body: some View {
-        Text("Soomswim")
-            .italic()
-            .fontWeight(.black)
-            .lineSpacing(25)
-            .font(.system(size: 40))
+        Group {
+            Text("S")
+                .italic()
+                .fontWeight(.black)
+                .foregroundColor(Color.mainPurple)
+                .font(.system(size: 50)) +
+            Text("oom")
+                .italic()
+                .fontWeight(.black)
+                .font(.system(size: 40)) +
+            Text("s")
+                .italic()
+                .fontWeight(.black)
+                .foregroundColor(Color.mainPurple)
+                .font(.system(size: 50)) +
+            Text("wim")
+                .italic()
+                .fontWeight(.black)
+                .font(.system(size: 40))
+        }
             .frame(width: 250, height: 100, alignment: .center)
             .padding()
+        
+//        Text("Soomswim")
+//            .italic()
+//            .fontWeight(.black)
+//            .lineSpacing(25)
+//            .font(.system(size: 40))
+//            .frame(width: 250, height: 100, alignment: .center)
+//            .padding()
     }
 }
 
