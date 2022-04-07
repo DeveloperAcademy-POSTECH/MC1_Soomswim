@@ -30,23 +30,13 @@ struct Login: View {
 
 struct LogoEnglish: View {
     var body: some View {
-        HStack {
-            LinearGradient(gradient: Gradient(colors: [Color.mainOrange, Color.mainMidOrange, Color.mainGreen]),
-                           startPoint: .leading,
-                           endPoint: .trailing)
-            .mask(self.logo)
-            .frame(width: 250, height: 100, alignment: .center)
-            .padding()
-        }
-        .frame(width: nil, height: nil, alignment: .center)
-    }
-    
-    private var logo: some View {
         Text("Soomswim")
             .italic()
             .fontWeight(.black)
             .lineSpacing(25)
             .font(.system(size: 40))
+            .frame(width: 250, height: 100, alignment: .center)
+            .padding()
     }
 }
 
@@ -99,9 +89,9 @@ struct LoginButtonContent: View {
             .font(.headline)
             .foregroundColor(.white)
             .padding()
-            .frame(width: 220, height: 60)
-            .background(Color.green)
-            .cornerRadius(15.0)
+            .frame(width: 200, height: 60)
+            .background(Color.mainPurple)
+            .cornerRadius(20.0)
     }
 }
 
