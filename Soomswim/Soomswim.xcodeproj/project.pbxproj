@@ -7,14 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3708963A27FC9319001A32E2 /* MyWriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3708963927FC9319001A32E2 /* MyWriting.swift */; };
-		3708963E27FCAD04001A32E2 /* Extensions in Resources */ = {isa = PBXBuildFile; fileRef = 3708963D27FCAD04001A32E2 /* Extensions */; };
-		3708964127FCAD58001A32E2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3708964027FCAD58001A32E2 /* Color.swift */; };
-		37C649FC27FD3420007AC2B4 /* ReplyToWriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C649FB27FD3420007AC2B4 /* ReplyToWriting.swift */; };
-		37FF42D727FE880D00EFBB6A /* MyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF42D627FE880D00EFBB6A /* MyPage.swift */; };
-		37FF42D927FE8AD500EFBB6A /* MyWritingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF42D827FE8AD400EFBB6A /* MyWritingCard.swift */; };
-		37FF42DB27FEFC9B00EFBB6A /* MyWritingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF42DA27FEFC9B00EFBB6A /* MyWritingData.swift */; };
-		37FF42E227FF16F600EFBB6A /* mywritingdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 37FF42E127FF16F600EFBB6A /* mywritingdata.json */; };
 		4A3BEB0F27FF5472002AA043 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BEB0E27FF5472002AA043 /* HTTPMethod.swift */; };
 		4A3BEB1127FF5490002AA043 /* SoomswimURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BEB1027FF5490002AA043 /* SoomswimURL.swift */; };
 		4A3BEB1327FF54AD002AA043 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BEB1227FF54AD002AA043 /* Response.swift */; };
@@ -43,15 +35,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3708963927FC9319001A32E2 /* MyWriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWriting.swift; sourceTree = "<group>"; };
-		3708963D27FCAD04001A32E2 /* Extensions */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Extensions; path = ../../../../../Downloads/SoomshimUI/SoomshimUI/Extensions; sourceTree = "<group>"; };
-		3708964027FCAD58001A32E2 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		3708964327FCAD64001A32E2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		37C649FB27FD3420007AC2B4 /* ReplyToWriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyToWriting.swift; sourceTree = "<group>"; };
-		37FF42D627FE880D00EFBB6A /* MyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage.swift; sourceTree = "<group>"; };
-		37FF42D827FE8AD400EFBB6A /* MyWritingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWritingCard.swift; sourceTree = "<group>"; };
-		37FF42DA27FEFC9B00EFBB6A /* MyWritingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWritingData.swift; sourceTree = "<group>"; };
-		37FF42E127FF16F600EFBB6A /* mywritingdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = mywritingdata.json; path = ../../../../../Documents/mywritingdata.json; sourceTree = "<group>"; };
 		4A3BEB0D27FF063C002AA043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4A3BEB0E27FF5472002AA043 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		4A3BEB1027FF5490002AA043 /* SoomswimURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoomswimURL.swift; sourceTree = "<group>"; };
@@ -92,7 +75,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-    433AC1E827FE745100C617E7 /* Feed */ = {
+		433AC1E827FE745100C617E7 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
 				433AC1E927FE745100C617E7 /* StoryContentPreview.swift */,
@@ -148,12 +131,7 @@
 		4A68F44D27FBF3250015639B /* Jerry */ = {
 			isa = PBXGroup;
 			children = (
-				37FF42E127FF16F600EFBB6A /* mywritingdata.json */,
-				3708963927FC9319001A32E2 /* MyWriting.swift */,
-				37C649FB27FD3420007AC2B4 /* ReplyToWriting.swift */,
-				37FF42D627FE880D00EFBB6A /* MyPage.swift */,
-				37FF42D827FE8AD400EFBB6A /* MyWritingCard.swift */,
-				37FF42DA27FEFC9B00EFBB6A /* MyWritingData.swift */,
+				4A68F45727FBF3640015639B /* Jerry.swift */,
 			);
 			path = Jerry;
 			sourceTree = "<group>";
@@ -205,7 +183,6 @@
 		4A876DEF27FBEBB5000DBE68 /* Soomswim */ = {
 			isa = PBXGroup;
 			children = (
-				3708964227FCAD64001A32E2 /* Extensions */,
 				4A3BEB0D27FF063C002AA043 /* Info.plist */,
 				4A68F45027FBF3390015639B /* Tanny */,
 				4A68F44F27FBF3340015639B /* Dinner */,
@@ -222,8 +199,6 @@
 		4A876DF627FBEBB6000DBE68 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				3708963D27FCAD04001A32E2 /* Extensions */,
-				3708963F27FCAD58001A32E2 /* Extensions */,
 				4A876DF727FBEBB6000DBE68 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -287,9 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3708963E27FCAD04001A32E2 /* Extensions in Resources */,
 				4A876DF827FBEBB6000DBE68 /* Preview Assets.xcassets in Resources */,
-				37FF42E227FF16F600EFBB6A /* mywritingdata.json in Resources */,
 				4A876DF527FBEBB6000DBE68 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,13 +280,8 @@
 				433AC1F127FE745100C617E7 /* Feed.swift in Sources */,
 				433AC1EF27FE745100C617E7 /* Profile.swift in Sources */,
 				4A68F45627FBF35F0015639B /* Key.swift in Sources */,
-				37FF42D727FE880D00EFBB6A /* MyPage.swift in Sources */,
-				3708964127FCAD58001A32E2 /* Color.swift in Sources */,
-				37C649FC27FD3420007AC2B4 /* ReplyToWriting.swift in Sources */,
-				37FF42DB27FEFC9B00EFBB6A /* MyWritingData.swift in Sources */,
-				37FF42D927FE8AD500EFBB6A /* MyWritingCard.swift in Sources */,
-				3708963A27FC9319001A32E2 /* MyWriting.swift in Sources */,
 				8493936C27FF3D7D00D186E4 /* LaunchScreen.swift in Sources */,
+				4A68F45827FBF3640015639B /* Jerry.swift in Sources */,
 				4A3BEB1127FF5490002AA043 /* SoomswimURL.swift in Sources */,
 				4A68F45C27FBF36E0015639B /* Eddy.swift in Sources */,
 				4A68F45A27FBF3680015639B /* NetworkService.swift in Sources */,
