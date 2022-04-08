@@ -11,7 +11,7 @@ import Combine
 
 
 
-struct ContentView: View {
+struct PostInputFinalView: View {
     
     var body: some View {
 
@@ -20,7 +20,7 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct PostInputFinalView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
         postInputView()
