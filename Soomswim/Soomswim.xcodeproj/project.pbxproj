@@ -18,7 +18,6 @@
 		433AC1FC27FE746800C617E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AC1F727FE746800C617E7 /* ContentView.swift */; };
 		433AC1FD27FE746800C617E7 /* SoomshimUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AC1F827FE746800C617E7 /* SoomshimUIApp.swift */; };
 		433AC20327FE74A700C617E7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AC20227FE74A700C617E7 /* Color.swift */; };
-		4A68F45227FBF3470015639B /* Tanny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68F45127FBF3470015639B /* Tanny.swift */; };
 		4A68F45427FBF34E0015639B /* Dinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68F45327FBF34E0015639B /* Dinner.swift */; };
 		4A68F45627FBF35F0015639B /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68F45527FBF35F0015639B /* Key.swift */; };
 		4A68F45827FBF3640015639B /* Jerry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68F45727FBF3640015639B /* Jerry.swift */; };
@@ -26,6 +25,8 @@
 		4A68F45C27FBF36E0015639B /* Eddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68F45B27FBF36E0015639B /* Eddy.swift */; };
 		4A876DF527FBEBB6000DBE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A876DF427FBEBB6000DBE68 /* Assets.xcassets */; };
 		4A876DF827FBEBB6000DBE68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A876DF727FBEBB6000DBE68 /* Preview Assets.xcassets */; };
+		8406950C27FE7602006934C5 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406950B27FE7602006934C5 /* Login.swift */; };
+		8493936C27FF3D7D00D186E4 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493936B27FF3D7D00D186E4 /* LaunchScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +41,6 @@
 		433AC1F727FE746800C617E7 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		433AC1F827FE746800C617E7 /* SoomshimUIApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoomshimUIApp.swift; sourceTree = "<group>"; };
 		433AC20227FE74A700C617E7 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		4A68F45127FBF3470015639B /* Tanny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tanny.swift; sourceTree = "<group>"; };
 		4A68F45327FBF34E0015639B /* Dinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dinner.swift; sourceTree = "<group>"; };
 		4A68F45527FBF35F0015639B /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		4A68F45727FBF3640015639B /* Jerry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jerry.swift; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		4A876DED27FBEBB5000DBE68 /* Soomswim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soomswim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A876DF427FBEBB6000DBE68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A876DF727FBEBB6000DBE68 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8406950B27FE7602006934C5 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		8493936B27FF3D7D00D186E4 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +142,8 @@
 		4A68F45027FBF3390015639B /* Tanny */ = {
 			isa = PBXGroup;
 			children = (
-				4A68F45127FBF3470015639B /* Tanny.swift */,
+				8406950B27FE7602006934C5 /* Login.swift */,
+				8493936B27FF3D7D00D186E4 /* LaunchScreen.swift */,
 			);
 			path = Tanny;
 			sourceTree = "<group>";
@@ -257,11 +260,13 @@
 				433AC1F127FE745100C617E7 /* Feed.swift in Sources */,
 				433AC1EF27FE745100C617E7 /* Profile.swift in Sources */,
 				4A68F45627FBF35F0015639B /* Key.swift in Sources */,
+				8493936C27FF3D7D00D186E4 /* LaunchScreen.swift in Sources */,
 				4A68F45827FBF3640015639B /* Jerry.swift in Sources */,
 				4A68F45C27FBF36E0015639B /* Eddy.swift in Sources */,
 				4A68F45A27FBF3680015639B /* Lizzy.swift in Sources */,
+				4A876DF127FBEBB5000DBE68 /* SoomswimApp.swift in Sources */,
+				8406950C27FE7602006934C5 /* Login.swift in Sources */,
 				433AC1FC27FE746800C617E7 /* ContentView.swift in Sources */,
-				4A68F45227FBF3470015639B /* Tanny.swift in Sources */,
 				433AC1F227FE745100C617E7 /* Separator.swift in Sources */,
 				433AC20327FE74A700C617E7 /* Color.swift in Sources */,
 				433AC1FB27FE746800C617E7 /* Mypage.swift in Sources */,
