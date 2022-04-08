@@ -7,10 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3708963A27FC9319001A32E2 /* MyWriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3708963927FC9319001A32E2 /* MyWriting.swift */; };
+		3708963E27FCAD04001A32E2 /* Extensions in Resources */ = {isa = PBXBuildFile; fileRef = 3708963D27FCAD04001A32E2 /* Extensions */; };
+		3708964127FCAD58001A32E2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3708964027FCAD58001A32E2 /* Color.swift */; };
+		37C649FC27FD3420007AC2B4 /* ReplyToWriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C649FB27FD3420007AC2B4 /* ReplyToWriting.swift */; };
+		37FF42D727FE880D00EFBB6A /* MyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF42D627FE880D00EFBB6A /* MyPage.swift */; };
+		37FF42D927FE8AD500EFBB6A /* MyWritingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF42D827FE8AD400EFBB6A /* MyWritingCard.swift */; };
+		37FF42DB27FEFC9B00EFBB6A /* MyWritingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF42DA27FEFC9B00EFBB6A /* MyWritingData.swift */; };
+		37FF42E227FF16F600EFBB6A /* mywritingdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 37FF42E127FF16F600EFBB6A /* mywritingdata.json */; };
 		4A68F45227FBF3470015639B /* Tanny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68F45127FBF3470015639B /* Tanny.swift */; };
 		4A68F45427FBF34E0015639B /* Dinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68F45327FBF34E0015639B /* Dinner.swift */; };
 		4A68F45627FBF35F0015639B /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68F45527FBF35F0015639B /* Key.swift */; };
-		4A68F45827FBF3640015639B /* Jerry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68F45727FBF3640015639B /* Jerry.swift */; };
 		4A68F45A27FBF3680015639B /* Lizzy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68F45927FBF3680015639B /* Lizzy.swift */; };
 		4A68F45C27FBF36E0015639B /* Eddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68F45B27FBF36E0015639B /* Eddy.swift */; };
 		4A876DF127FBEBB5000DBE68 /* SoomswimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A876DF027FBEBB5000DBE68 /* SoomswimApp.swift */; };
@@ -20,10 +27,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3708963927FC9319001A32E2 /* MyWriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWriting.swift; sourceTree = "<group>"; };
+		3708963D27FCAD04001A32E2 /* Extensions */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Extensions; path = ../../../../../Downloads/SoomshimUI/SoomshimUI/Extensions; sourceTree = "<group>"; };
+		3708964027FCAD58001A32E2 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		3708964327FCAD64001A32E2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		37C649FB27FD3420007AC2B4 /* ReplyToWriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyToWriting.swift; sourceTree = "<group>"; };
+		37FF42D627FE880D00EFBB6A /* MyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage.swift; sourceTree = "<group>"; };
+		37FF42D827FE8AD400EFBB6A /* MyWritingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWritingCard.swift; sourceTree = "<group>"; };
+		37FF42DA27FEFC9B00EFBB6A /* MyWritingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWritingData.swift; sourceTree = "<group>"; };
+		37FF42E127FF16F600EFBB6A /* mywritingdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = mywritingdata.json; path = ../../../../../Documents/mywritingdata.json; sourceTree = "<group>"; };
 		4A68F45127FBF3470015639B /* Tanny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tanny.swift; sourceTree = "<group>"; };
 		4A68F45327FBF34E0015639B /* Dinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dinner.swift; sourceTree = "<group>"; };
 		4A68F45527FBF35F0015639B /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
-		4A68F45727FBF3640015639B /* Jerry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jerry.swift; sourceTree = "<group>"; };
 		4A68F45927FBF3680015639B /* Lizzy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lizzy.swift; sourceTree = "<group>"; };
 		4A68F45B27FBF36E0015639B /* Eddy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eddy.swift; sourceTree = "<group>"; };
 		4A876DED27FBEBB5000DBE68 /* Soomswim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soomswim.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +59,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3708963F27FCAD58001A32E2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3708964027FCAD58001A32E2 /* Color.swift */,
+			);
+			name = Extensions;
+			path = ../../../../../Downloads/SoomshimUI/SoomshimUI/Extensions;
+			sourceTree = "<group>";
+		};
+		3708964227FCAD64001A32E2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3708964327FCAD64001A32E2 /* Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4A68F44B27FBF31B0015639B /* Eddy */ = {
 			isa = PBXGroup;
 			children = (
@@ -63,7 +95,12 @@
 		4A68F44D27FBF3250015639B /* Jerry */ = {
 			isa = PBXGroup;
 			children = (
-				4A68F45727FBF3640015639B /* Jerry.swift */,
+				37FF42E127FF16F600EFBB6A /* mywritingdata.json */,
+				3708963927FC9319001A32E2 /* MyWriting.swift */,
+				37C649FB27FD3420007AC2B4 /* ReplyToWriting.swift */,
+				37FF42D627FE880D00EFBB6A /* MyPage.swift */,
+				37FF42D827FE8AD400EFBB6A /* MyWritingCard.swift */,
+				37FF42DA27FEFC9B00EFBB6A /* MyWritingData.swift */,
 			);
 			path = Jerry;
 			sourceTree = "<group>";
@@ -111,6 +148,7 @@
 		4A876DEF27FBEBB5000DBE68 /* Soomswim */ = {
 			isa = PBXGroup;
 			children = (
+				3708964227FCAD64001A32E2 /* Extensions */,
 				4A68F45027FBF3390015639B /* Tanny */,
 				4A68F44F27FBF3340015639B /* Dinner */,
 				4A68F44E27FBF32C0015639B /* Key */,
@@ -128,6 +166,8 @@
 		4A876DF627FBEBB6000DBE68 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				3708963D27FCAD04001A32E2 /* Extensions */,
+				3708963F27FCAD58001A32E2 /* Extensions */,
 				4A876DF727FBEBB6000DBE68 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -191,7 +231,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3708963E27FCAD04001A32E2 /* Extensions in Resources */,
 				4A876DF827FBEBB6000DBE68 /* Preview Assets.xcassets in Resources */,
+				37FF42E227FF16F600EFBB6A /* mywritingdata.json in Resources */,
 				4A876DF527FBEBB6000DBE68 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,9 +247,14 @@
 			files = (
 				4A876DF327FBEBB5000DBE68 /* ContentView.swift in Sources */,
 				4A68F45627FBF35F0015639B /* Key.swift in Sources */,
-				4A68F45827FBF3640015639B /* Jerry.swift in Sources */,
+				37FF42D727FE880D00EFBB6A /* MyPage.swift in Sources */,
+				3708964127FCAD58001A32E2 /* Color.swift in Sources */,
+				37C649FC27FD3420007AC2B4 /* ReplyToWriting.swift in Sources */,
 				4A68F45C27FBF36E0015639B /* Eddy.swift in Sources */,
+				37FF42DB27FEFC9B00EFBB6A /* MyWritingData.swift in Sources */,
 				4A68F45A27FBF3680015639B /* Lizzy.swift in Sources */,
+				37FF42D927FE8AD500EFBB6A /* MyWritingCard.swift in Sources */,
+				3708963A27FC9319001A32E2 /* MyWriting.swift in Sources */,
 				4A876DF127FBEBB5000DBE68 /* SoomswimApp.swift in Sources */,
 				4A68F45227FBF3470015639B /* Tanny.swift in Sources */,
 				4A68F45427FBF34E0015639B /* Dinner.swift in Sources */,
