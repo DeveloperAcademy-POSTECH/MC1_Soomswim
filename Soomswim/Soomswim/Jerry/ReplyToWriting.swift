@@ -7,16 +7,11 @@
 
 import SwiftUI
 
-struct ReplyToWriting: View{
+struct ReplyToWritingView: View{
     var color: Color
     
     var body: some View {
         color
             .frame(width: 200, height: 100)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Logo()
-                }
-            }
     }
 }
