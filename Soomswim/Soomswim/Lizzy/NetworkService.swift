@@ -20,12 +20,3 @@ struct NetworkService {
     }
 }
 
-
-//    func hander(data: Response<String>, response: URLResponse?) {
-//        print(data)
-//    }
-//    
-//    guard let request = try? RequestFactory(url: SoomswimURL.login).request(params: ["name": "hello"]) else { return print("error") }
-//    NetworkService().request(request, handler: {
-//        hander(data: $0, response: $1)
-//    })
