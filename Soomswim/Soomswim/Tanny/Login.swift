@@ -32,6 +32,7 @@ struct Login: View {
     
     func switchPage(data: Response<String>, response: URLResponse?) -> Void {
         UserDefaults.standard.set(self.username, forKey: "name")
+        self.viewRouter.user(self.username)
         self.viewRouter.switchPage(.feed)
     }
 }
