@@ -49,21 +49,6 @@ struct Feed: View {
     }
 }
 
-
-
-struct Story2: Codable {
-    let id: Int
-    let date: String
-    let content: String
-    let writer: User
-}
-
-struct User: Codable {
-    let id: Int
-    let name: String
-    let profile: String
-}
-
 struct Feed_Previews: PreviewProvider {
     @State static private var name: String = "Dinner"
     

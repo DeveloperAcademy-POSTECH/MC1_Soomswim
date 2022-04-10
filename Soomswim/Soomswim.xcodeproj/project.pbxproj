@@ -16,6 +16,8 @@
 		433AC1FA27FE746800C617E7 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AC1F527FE746800C617E7 /* Tab.swift */; };
 		433AC1FD27FE746800C617E7 /* SoomshimUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AC1F827FE746800C617E7 /* SoomshimUIApp.swift */; };
 		433AC20327FE74A700C617E7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AC20227FE74A700C617E7 /* Color.swift */; };
+		4A3226CB2802A18500DFB348 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3226CA2802A18500DFB348 /* Story.swift */; };
+		4A3226CD2802A19B00DFB348 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3226CC2802A19B00DFB348 /* User.swift */; };
 		4A3BEB0F27FF5472002AA043 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BEB0E27FF5472002AA043 /* HTTPMethod.swift */; };
 		4A3BEB1127FF5490002AA043 /* SoomswimURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BEB1027FF5490002AA043 /* SoomswimURL.swift */; };
 		4A3BEB1327FF54AD002AA043 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BEB1227FF54AD002AA043 /* Response.swift */; };
@@ -54,6 +56,8 @@
 		433AC1F527FE746800C617E7 /* Tab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		433AC1F827FE746800C617E7 /* SoomshimUIApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoomshimUIApp.swift; sourceTree = "<group>"; };
 		433AC20227FE74A700C617E7 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		4A3226CA2802A18500DFB348 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		4A3226CC2802A19B00DFB348 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4A3BEB0D27FF063C002AA043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4A3BEB0E27FF5472002AA043 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		4A3BEB1027FF5490002AA043 /* SoomswimURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoomswimURL.swift; sourceTree = "<group>"; };
@@ -126,6 +130,28 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		4A3226C82802A16900DFB348 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A3226CA2802A18500DFB348 /* Story.swift */,
+				4A3226CC2802A19B00DFB348 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A3226C92802A16F00DFB348 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4A68F45927FBF3680015639B /* NetworkService.swift */,
+				4A3BEB0E27FF5472002AA043 /* HTTPMethod.swift */,
+				4A3BEB1027FF5490002AA043 /* SoomswimURL.swift */,
+				4A3BEB1227FF54AD002AA043 /* Response.swift */,
+				4A3BEB1427FF54EF002AA043 /* RequestFactory.swift */,
+				4A3BEB1627FF550B002AA043 /* DataType.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		4A68F44B27FBF31B0015639B /* Eddy */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,12 +166,8 @@
 		4A68F44C27FBF3210015639B /* Lizzy */ = {
 			isa = PBXGroup;
 			children = (
-				4A68F45927FBF3680015639B /* NetworkService.swift */,
-				4A3BEB0E27FF5472002AA043 /* HTTPMethod.swift */,
-				4A3BEB1027FF5490002AA043 /* SoomswimURL.swift */,
-				4A3BEB1227FF54AD002AA043 /* Response.swift */,
-				4A3BEB1427FF54EF002AA043 /* RequestFactory.swift */,
-				4A3BEB1627FF550B002AA043 /* DataType.swift */,
+				4A3226C92802A16F00DFB348 /* Network */,
+				4A3226C82802A16900DFB348 /* Model */,
 				4A619B372801DE880075FD27 /* DataLoader.swift */,
 			);
 			path = Lizzy;
@@ -337,6 +359,7 @@
 				433AC20327FE74A700C617E7 /* Color.swift in Sources */,
 				4A912CD127FFE6F600AB69EB /* BeforePostInputView.swift in Sources */,
 				4A912CE627FFE7A900AB69EB /* MyPage.swift in Sources */,
+				4A3226CD2802A19B00DFB348 /* User.swift in Sources */,
 				433AC1F927FE746800C617E7 /* Header.swift in Sources */,
 				433AC1EE27FE745100C617E7 /* StoryContentPreview.swift in Sources */,
 				4A912CD327FFE6F600AB69EB /* NextPage.swift in Sources */,
@@ -345,6 +368,7 @@
 				433AC1FD27FE746800C617E7 /* SoomshimUIApp.swift in Sources */,
 				4A912CD927FFE70100AB69EB /* PostInputFinalView.swift in Sources */,
 				433AC1F027FE745100C617E7 /* StoryPreview.swift in Sources */,
+				4A3226CB2802A18500DFB348 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
