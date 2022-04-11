@@ -31,6 +31,24 @@ struct Header: View {
     }
 }
 
+struct HeaderLogo: View {
+    var body: some View {
+        LinearGradient(gradient: Gradient(colors: [Color.mainOrange, Color.mainMidOrange, Color.mainGreen]),
+                       startPoint: .leading,
+                       endPoint: .trailing)
+        .mask(self.logo)
+        .frame(width: 130, height: 30, alignment: .center)
+    }
+    
+    private var logo: some View {
+        Text("Soomswim")
+            .italic()
+            .fontWeight(.black)
+            .lineSpacing(25)
+            .font(.system(size: 21))
+    }
+}
+
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
