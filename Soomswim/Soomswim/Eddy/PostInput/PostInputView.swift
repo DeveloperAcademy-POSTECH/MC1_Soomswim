@@ -11,9 +11,7 @@ struct TextView: UIViewRepresentable {
 
     @Binding var text: String
     @Binding var font: UIFont
-    
-    var accessoryViewController: postInputView?
-    
+        
     func makeUIView(context: Context) -> UITextView {
         let textView = UITextView()
         return textView
@@ -33,9 +31,12 @@ struct TextView: UIViewRepresentable {
         }
     }
 }
-  extension TextView.Coordinator: UITextViewDelegate {
+  
+extension TextView.Coordinator: UITextViewDelegate {
+    
     func textViewDidChange(_ textView: UITextView) {
-      self.text.wrappedValue = textView.text
+      
+        self.text.wrappedValue = textView.text
     }
 
 }
@@ -43,10 +44,8 @@ struct TextView: UIViewRepresentable {
 
 struct postInputView: View {
 
+    @Binding var shouldPopToRootView : Bool
 
-    
-    @State private var showNew = false
-    
     @State private var text: String = ""
     
     @State private var showingImagePicker = false
@@ -54,9 +53,6 @@ struct postInputView: View {
 
     @State var showTextEditor = ""
     @State var itemArray: [String] = []
-    
-    @State var isActive : Bool = false
-
     
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
@@ -74,16 +70,21 @@ struct postInputView: View {
     
     var body: some View {
         ZStack{
-            TextEditor(text: $text)
-//                .toolbar {
-//                    ToolbarItemGroup(placement: .keyboard) {
-//                        Button("Click me!") {
-//                            print("")
-//                        }
-//                    }
-//                }
+            TextEditor(text: self.$text)
             Text(text).opacity(0).padding()
+            
         }
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 800)
+        .border(Color.gray, width: 1)
+        .font(.system(size:15, weight: .regular))
+        .lineSpacing(2.5)
+        .multilineTextAlignment(.center)
+        .onChange(of: text, perform: { value in
+                print("Value of text modified to = \(text)")
+            })
+        .disableAutocorrection(true)
+
+        
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: btnBack)
         .padding()
@@ -98,52 +99,30 @@ struct postInputView: View {
                             self.pickedImage = Image(uiImage: image)
                             print(image)
                         }
-                        
                     }
                     .imageScale(.medium)
                     .font(.title3)
                     .foregroundColor(.orange)
-//
-//                    Button(action: {self.shouldPopToRootView = false}) {
-//                        Text("완료")
-//                    }
-//
-
                     
-                    NavigationLink(destination:
-                    BeforePostInputView()){
+                    
+                    Button(action: { self.shouldPopToRootView = false } ){
                         Text("완료")
                     }
                     .foregroundColor(.orange)
                     .font(.body)
-                    
-//                    Button(action: {
-//                        hideKeyboard()
-//                        saveItem()
-//                    }) {
-//                        Text("완료")
-//                            .foregroundColor(.orange)
-//                            .fontWeight(.bold)
-//                            .font(.body)
-//                    }
                 }
             }
         }
     }
-    
-    func saveItem() {
-         itemArray.append(showTextEditor)
-         showTextEditor = ""
-    }
         }
-extension View {
-    func hideKeyboard() {
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-    }
-}
+//extension View {
+//    func hideKeyboard() {
+//        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+//    }
+//}
         
 struct PostInputView_Previews: PreviewProvider {
     static var previews: some View {
-        postInputView()
+        BeforePostInputView()
     }
 }

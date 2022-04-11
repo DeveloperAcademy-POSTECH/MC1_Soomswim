@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-import UIKit
-import Combine
 
 
 
@@ -22,9 +20,6 @@ struct PostInputFinalView: View {
 
 struct PostInputFinalView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-        postInputView()
-        nextPage()
-        
+        BeforePostInputView()
     }
 }
