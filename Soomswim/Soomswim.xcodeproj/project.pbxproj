@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3713056F28030DCF00EDC243 /* ReplyDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3713056E28030DCF00EDC243 /* ReplyDetail.swift */; };
 		433AC1EE27FE745100C617E7 /* StoryContentPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AC1E927FE745100C617E7 /* StoryContentPreview.swift */; };
 		433AC1EF27FE745100C617E7 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AC1EA27FE745100C617E7 /* Profile.swift */; };
 		433AC1F027FE745100C617E7 /* StoryPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AC1EB27FE745100C617E7 /* StoryPreview.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3713056E28030DCF00EDC243 /* ReplyDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyDetail.swift; sourceTree = "<group>"; };
 		433AC1E927FE745100C617E7 /* StoryContentPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryContentPreview.swift; sourceTree = "<group>"; };
 		433AC1EA27FE745100C617E7 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		433AC1EB27FE745100C617E7 /* StoryPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryPreview.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				4A912CDF27FFE7A900AB69EB /* MyWritingCard.swift */,
 				4A912CDE27FFE7A900AB69EB /* MyWritingData.swift */,
 				4A912CE027FFE7A900AB69EB /* ReplyToWriting.swift */,
+				3713056E28030DCF00EDC243 /* ReplyDetail.swift */,
 			);
 			path = Jerry;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				4A3BEB1127FF5490002AA043 /* SoomswimURL.swift in Sources */,
 				4A912CE227FFE7A900AB69EB /* MyWriting.swift in Sources */,
 				4A68F45C27FBF36E0015639B /* Eddy.swift in Sources */,
+				3713056F28030DCF00EDC243 /* ReplyDetail.swift in Sources */,
 				4A68F45A27FBF3680015639B /* NetworkService.swift in Sources */,
 				4A3BEB0F27FF5472002AA043 /* HTTPMethod.swift in Sources */,
 				4A912CE327FFE7A900AB69EB /* MyWritingData.swift in Sources */,
@@ -473,6 +477,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Soomswim/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Soomswim/Info.plist;
@@ -502,6 +507,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Soomswim/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Soomswim/Info.plist;
