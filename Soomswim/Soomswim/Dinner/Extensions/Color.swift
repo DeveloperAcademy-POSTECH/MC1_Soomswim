@@ -8,7 +8,8 @@
 import SwiftUI
 
 extension Color {
-    static let mainGreen: Color = Color(red: 163/255, green: 246/255, blue: 168/255)
-    static let mainMidOrange: Color = Color(red: 241/255, green: 203/255, blue: 134/255)
-    static let mainOrange: Color = Color(red: 255/255, green: 87/255, blue: 0)
-}
+  static let mainGreen: Color = Color(red: 163/255, green: 246/255, blue: 168/255)
+  static let mainMidOrange: Color = Color(red: 241/255, green: 203/255, blue: 134/255)
+  static let mainOrange: Color = Color(red: 255/255, green: 87/255, blue: 0)
+  static let FriendsListBlue: Color = Color(red: 39/255, green: 0, blue: 255/255)
+  static let FriendsListGrey: Color = Color(red: 247/255, green: 247/255, blue: 247/255)}
