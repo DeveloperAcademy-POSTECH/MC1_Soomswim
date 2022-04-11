@@ -15,14 +15,25 @@ extension Color {
 
 struct Login: View {
     @State var username: String = ""
+    private let viewRouter: ViewRouter
+    
+    init(viewRouter: ViewRouter) {
+        self.viewRouter = viewRouter
+    }
     
     var body: some View {
         VStack {
             LogoEnglish()
             LogoImage()
-            UserNameField()
-            LoginButton()
+            UserNameField(username: self.$username)
+            LoginButton(username: self.$username, handler: switchPage)
         }
+    }
+    
+    func switchPage(data: Response<String>, response: URLResponse?) -> Void {
+        UserDefaults.standard.set(self.username, forKey: "name")
+        self.viewRouter.user(self.username)
+        self.viewRouter.switchPage(.feed)
     }
 }
 
@@ -67,7 +78,7 @@ struct LogoImage: View {
 //            Text("내 마음의 안식처")
 //                .font(.callout)
 //                .foregroundColor(Color.gray)
-            Image("Logo_purple")
+            Image("playstore")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 250, height: 180)
@@ -92,10 +103,14 @@ struct LogoImage: View {
 }
 
 struct UserNameField: View {
-    @State var username: String = ""
+    @Binding private var username: String
+    
+    init(username: Binding<String>) {
+        self._username = username
+    }
     
     var body: some View {
-        return TextField("Username", text: $username)
+        return TextField("Username", text: self.$username)
             .padding()
             .background(Color.lightGray)
             .cornerRadius(5.0)
@@ -117,8 +132,21 @@ struct LoginButtonContent: View {
 }
 
 struct LoginButton: View {
+    private let handler: (Response<String>, URLResponse?) -> Void
+    @Binding private var username: String
+    
+    init(username: Binding<String>, handler: @escaping (Response<String>, URLResponse?) -> Void) {
+        self._username = username
+        self.handler = handler
+    }
+    
     var body: some View {
-        Button(action: {print("Button tapped")}) {
+        Button(action: {
+            guard let request = try? RequestFactory(url: SoomswimURL.login).request(params: ["name": self.username]) else { return print("error") }
+            NetworkService().request(request, handler: {
+                self.handler($0, $1)
+            })
+        }) {
             LoginButtonContent()
         }
     }
@@ -126,6 +154,6 @@ struct LoginButton: View {
 
 struct Login_Previews: PreviewProvider {
     static var previews: some View {
-        Login()
+        Login(viewRouter: ViewRouter())
     }
 }

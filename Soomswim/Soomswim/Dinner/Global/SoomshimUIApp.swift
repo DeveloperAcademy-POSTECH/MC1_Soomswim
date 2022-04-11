@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct SoomshimUIApp: App {
+    @ObservedObject private var viewRouter: ViewRouter
+    
+    init() {
+        self.viewRouter = ViewRouter()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            switch self.viewRouter.currentPage {
+            case .feed : HomeTab(name: self.viewRouter.name)
+            case .login : Login(viewRouter: self.viewRouter)
+            }
         }
     }
 }

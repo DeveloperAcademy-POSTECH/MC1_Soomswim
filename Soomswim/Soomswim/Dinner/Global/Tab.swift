@@ -7,17 +7,22 @@
 
 import SwiftUI
 
-struct Tab: View {
+struct HomeTab: View {
+    @State private(set) var name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+    
     var body: some View {
-        
         TabView {
-            ContentView()
+            Feed(name: self.$name)
                 .tabItem {
                     Image(systemName: "list.dash")
-                    Text("feed")
+                    Text("Feed")
                 }
 
-            Mypage()
+            MyPageView()
                 .tabItem {
                     Image(systemName: "square.and.pencil")
                     Text("My Page")
@@ -27,8 +32,8 @@ struct Tab: View {
     }
 }
 
-struct Tab_Previews: PreviewProvider {
+struct HomeTab_Previews: PreviewProvider {
     static var previews: some View {
-        Tab()
+        HomeTab(name: "Dinner")
     }
 }

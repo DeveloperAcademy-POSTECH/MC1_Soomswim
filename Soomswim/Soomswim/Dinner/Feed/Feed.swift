@@ -8,23 +8,53 @@
 import SwiftUI
 
 struct Feed: View {
+    @Binding private var name: String
+    @ObservedObject private var stories: DataLoader<Array<Story2>>
+    
+    init(name: Binding<String>) {
+        self._name = name
+        self.stories = DataLoader<Array<Story2>>()
+        self.contents()
+    }
+    
     var body: some View {
         VStack {
-            ForEach(0..<5) {_ in
-                StoryPreview1()
-                Seperator()
-                StoryPreview2()
-                Seperator()
+            Header()
+            ScrollView {
+                if let stories = self.stories.data,
+                   stories.count > 0 {
+                    ForEach(Array(zip(Array(0..<stories.count), stories)), id: \.0, content: { (idx, story) in
+                        if idx != 0 { Seperator() }
+                        switch idx % 2 == 0 {
+                        case true : StoryPreview1(story: story)
+                        case false : StoryPreview2(story: story)
+                        }
+                    })
+                }
+                else { Text("No Contents") }
             }
-            StoryPreview1()
         }
+    }
+    
+    private func contents() {
+        guard let request = try? RequestFactory(url: SoomswimURL.stories).request(params: ["name": self.name]) else { return print("error") }
+        NetworkService().request(request, handler: fillFeed)
+    }
+    
+    private func fillFeed(data: Response<Array<Story2>>, response: URLResponse?) {
+        guard (response as? HTTPURLResponse)?.statusCode == 200,
+              let stories = data.data
+        else { return print("no contents") }
+        self.stories.fill(data: stories)
     }
 }
 
 struct Feed_Previews: PreviewProvider {
+    @State static private var name: String = "Dinner"
+    
     static var previews: some View {
         Group {
-            Feed()
+            Feed(name: self.$name)
         }
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 struct Profile: View {
     var body: some View {
         VStack {
-            Image("") // 이미지 추가 필요
+            Image(systemName: "person.fill") // 이미지 추가 필요
                 .foregroundColor(Color(uiColor: UIColor.systemGray))
                 .frame(width: 65.24, height: 65.24, alignment: .center)
                 .clipShape(Circle())
