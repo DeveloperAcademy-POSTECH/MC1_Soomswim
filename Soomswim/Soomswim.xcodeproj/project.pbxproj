@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3713056F28030DCF00EDC243 /* ReplyDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3713056E28030DCF00EDC243 /* ReplyDetail.swift */; };
 		433AC1EE27FE745100C617E7 /* StoryContentPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AC1E927FE745100C617E7 /* StoryContentPreview.swift */; };
 		433AC1EF27FE745100C617E7 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AC1EA27FE745100C617E7 /* Profile.swift */; };
 		433AC1F027FE745100C617E7 /* StoryPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AC1EB27FE745100C617E7 /* StoryPreview.swift */; };
@@ -18,6 +19,12 @@
 		433AC20327FE74A700C617E7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AC20227FE74A700C617E7 /* Color.swift */; };
 		4A3226CB2802A18500DFB348 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3226CA2802A18500DFB348 /* Story.swift */; };
 		4A3226CD2802A19B00DFB348 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3226CC2802A19B00DFB348 /* User.swift */; };
+		437394BE2803AEB00058B53C /* FriendsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437394BD2803AEB00058B53C /* FriendsListView.swift */; };
+		437394C52803AEDB0058B53C /* FriendsName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437394C02803AEDB0058B53C /* FriendsName.swift */; };
+		437394C62803AEDB0058B53C /* FriendsListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437394C12803AEDB0058B53C /* FriendsListPage.swift */; };
+		437394C72803AEDB0058B53C /* FriendsSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437394C22803AEDB0058B53C /* FriendsSearchBar.swift */; };
+		437394C82803AEDB0058B53C /* FriendsProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437394C32803AEDB0058B53C /* FriendsProfile.swift */; };
+		437394C92803AEDB0058B53C /* FriendsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437394C42803AEDB0058B53C /* FriendsList.swift */; };
 		4A3BEB0F27FF5472002AA043 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BEB0E27FF5472002AA043 /* HTTPMethod.swift */; };
 		4A3BEB1127FF5490002AA043 /* SoomswimURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BEB1027FF5490002AA043 /* SoomswimURL.swift */; };
 		4A3BEB1327FF54AD002AA043 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BEB1227FF54AD002AA043 /* Response.swift */; };
@@ -33,7 +40,6 @@
 		4A876DF827FBEBB6000DBE68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A876DF727FBEBB6000DBE68 /* Preview Assets.xcassets */; };
 		4A912CD127FFE6F600AB69EB /* BeforePostInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A912CCD27FFE6F600AB69EB /* BeforePostInputView.swift */; };
 		4A912CD227FFE6F600AB69EB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A912CCE27FFE6F600AB69EB /* ImagePicker.swift */; };
-		4A912CD327FFE6F600AB69EB /* NextPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A912CCF27FFE6F600AB69EB /* NextPage.swift */; };
 		4A912CD427FFE6F600AB69EB /* PostInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A912CD027FFE6F600AB69EB /* PostInputView.swift */; };
 		4A912CD827FFE70100AB69EB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4A912CD527FFE70100AB69EB /* README.md */; };
 		4A912CD927FFE70100AB69EB /* PostInputFinalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A912CD627FFE70100AB69EB /* PostInputFinalView.swift */; };
@@ -47,6 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3713056E28030DCF00EDC243 /* ReplyDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyDetail.swift; sourceTree = "<group>"; };
 		433AC1E927FE745100C617E7 /* StoryContentPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryContentPreview.swift; sourceTree = "<group>"; };
 		433AC1EA27FE745100C617E7 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		433AC1EB27FE745100C617E7 /* StoryPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryPreview.swift; sourceTree = "<group>"; };
@@ -58,6 +65,12 @@
 		433AC20227FE74A700C617E7 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		4A3226CA2802A18500DFB348 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		4A3226CC2802A19B00DFB348 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		437394BD2803AEB00058B53C /* FriendsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListView.swift; sourceTree = "<group>"; };
+		437394C02803AEDB0058B53C /* FriendsName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsName.swift; sourceTree = "<group>"; };
+		437394C12803AEDB0058B53C /* FriendsListPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListPage.swift; sourceTree = "<group>"; };
+		437394C22803AEDB0058B53C /* FriendsSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsSearchBar.swift; sourceTree = "<group>"; };
+		437394C32803AEDB0058B53C /* FriendsProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsProfile.swift; sourceTree = "<group>"; };
+		437394C42803AEDB0058B53C /* FriendsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsList.swift; sourceTree = "<group>"; };
 		4A3BEB0D27FF063C002AA043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4A3BEB0E27FF5472002AA043 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		4A3BEB1027FF5490002AA043 /* SoomswimURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoomswimURL.swift; sourceTree = "<group>"; };
@@ -75,7 +88,6 @@
 		4A876DF727FBEBB6000DBE68 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4A912CCD27FFE6F600AB69EB /* BeforePostInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeforePostInputView.swift; sourceTree = "<group>"; };
 		4A912CCE27FFE6F600AB69EB /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		4A912CCF27FFE6F600AB69EB /* NextPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextPage.swift; sourceTree = "<group>"; };
 		4A912CD027FFE6F600AB69EB /* PostInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostInputView.swift; sourceTree = "<group>"; };
 		4A912CD527FFE70100AB69EB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4A912CD627FFE70100AB69EB /* PostInputFinalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostInputFinalView.swift; sourceTree = "<group>"; };
@@ -117,6 +129,9 @@
 				433AC1F427FE746800C617E7 /* Header.swift */,
 				433AC1F527FE746800C617E7 /* Tab.swift */,
 				4A619B352801BFE10075FD27 /* ViewRouter.swift */,
+				433AC1F627FE746800C617E7 /* Mypage.swift */,
+				433AC1F727FE746800C617E7 /* ContentView.swift */,
+				437394BD2803AEB00058B53C /* FriendsListView.swift */,
 				433AC1F827FE746800C617E7 /* SoomshimUIApp.swift */,
 			);
 			path = Global;
@@ -150,14 +165,24 @@
 				4A3BEB1627FF550B002AA043 /* DataType.swift */,
 			);
 			path = Network;
+		437394BF2803AEC40058B53C /* FriendsList */ = {
+			isa = PBXGroup;
+			children = (
+				437394C42803AEDB0058B53C /* FriendsList.swift */,
+				437394C12803AEDB0058B53C /* FriendsListPage.swift */,
+				437394C02803AEDB0058B53C /* FriendsName.swift */,
+				437394C32803AEDB0058B53C /* FriendsProfile.swift */,
+				437394C22803AEDB0058B53C /* FriendsSearchBar.swift */,
+			);
+			path = FriendsList;
 			sourceTree = "<group>";
 		};
 		4A68F44B27FBF31B0015639B /* Eddy */ = {
 			isa = PBXGroup;
 			children = (
+				4A912CD627FFE70100AB69EB /* PostInputFinalView.swift */,
 				4A912CCC27FFE6F600AB69EB /* PostInput */,
 				4A68F45B27FBF36E0015639B /* Eddy.swift */,
-				4A912CD627FFE70100AB69EB /* PostInputFinalView.swift */,
 				4A912CD527FFE70100AB69EB /* README.md */,
 			);
 			path = Eddy;
@@ -181,6 +206,7 @@
 				4A912CDF27FFE7A900AB69EB /* MyWritingCard.swift */,
 				4A912CDE27FFE7A900AB69EB /* MyWritingData.swift */,
 				4A912CE027FFE7A900AB69EB /* ReplyToWriting.swift */,
+				3713056E28030DCF00EDC243 /* ReplyDetail.swift */,
 			);
 			path = Jerry;
 			sourceTree = "<group>";
@@ -196,6 +222,7 @@
 		4A68F44F27FBF3340015639B /* Dinner */ = {
 			isa = PBXGroup;
 			children = (
+				437394BF2803AEC40058B53C /* FriendsList */,
 				433AC20127FE74A700C617E7 /* Extensions */,
 				433AC1F327FE746800C617E7 /* Global */,
 				433AC1E827FE745100C617E7 /* Feed */,
@@ -257,9 +284,8 @@
 			isa = PBXGroup;
 			children = (
 				4A912CCD27FFE6F600AB69EB /* BeforePostInputView.swift */,
-				4A912CCE27FFE6F600AB69EB /* ImagePicker.swift */,
-				4A912CCF27FFE6F600AB69EB /* NextPage.swift */,
 				4A912CD027FFE6F600AB69EB /* PostInputView.swift */,
+				4A912CCE27FFE6F600AB69EB /* ImagePicker.swift */,
 			);
 			path = PostInput;
 			sourceTree = "<group>";
@@ -343,12 +369,17 @@
 				433AC1F127FE745100C617E7 /* Feed.swift in Sources */,
 				433AC1EF27FE745100C617E7 /* Profile.swift in Sources */,
 				4A68F45627FBF35F0015639B /* Key.swift in Sources */,
+				437394C82803AEDB0058B53C /* FriendsProfile.swift in Sources */,
+				437394C62803AEDB0058B53C /* FriendsListPage.swift in Sources */,
+				437394C92803AEDB0058B53C /* FriendsList.swift in Sources */,
+				437394C52803AEDB0058B53C /* FriendsName.swift in Sources */,
 				4A912CE427FFE7A900AB69EB /* MyWritingCard.swift in Sources */,
 				8493936C27FF3D7D00D186E4 /* LaunchScreen.swift in Sources */,
 				4A3BEB1127FF5490002AA043 /* SoomswimURL.swift in Sources */,
 				4A619B382801DE880075FD27 /* DataLoader.swift in Sources */,
 				4A912CE227FFE7A900AB69EB /* MyWriting.swift in Sources */,
 				4A68F45C27FBF36E0015639B /* Eddy.swift in Sources */,
+				3713056F28030DCF00EDC243 /* ReplyDetail.swift in Sources */,
 				4A68F45A27FBF3680015639B /* NetworkService.swift in Sources */,
 				4A3BEB0F27FF5472002AA043 /* HTTPMethod.swift in Sources */,
 				4A912CE327FFE7A900AB69EB /* MyWritingData.swift in Sources */,
@@ -362,13 +393,14 @@
 				4A3226CD2802A19B00DFB348 /* User.swift in Sources */,
 				433AC1F927FE746800C617E7 /* Header.swift in Sources */,
 				433AC1EE27FE745100C617E7 /* StoryContentPreview.swift in Sources */,
-				4A912CD327FFE6F600AB69EB /* NextPage.swift in Sources */,
 				433AC1FA27FE746800C617E7 /* Tab.swift in Sources */,
+				437394BE2803AEB00058B53C /* FriendsListView.swift in Sources */,
 				4A68F45427FBF34E0015639B /* Dinner.swift in Sources */,
 				433AC1FD27FE746800C617E7 /* SoomshimUIApp.swift in Sources */,
 				4A912CD927FFE70100AB69EB /* PostInputFinalView.swift in Sources */,
 				433AC1F027FE745100C617E7 /* StoryPreview.swift in Sources */,
 				4A3226CB2802A18500DFB348 /* Story.swift in Sources */,
+				437394C72803AEDB0058B53C /* FriendsSearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +529,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Soomswim/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Soomswim/Info.plist;
@@ -526,6 +559,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Soomswim/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Soomswim/Info.plist;
