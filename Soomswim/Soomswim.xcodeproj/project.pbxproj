@@ -50,6 +50,7 @@
 		4AEEB23F2803B8A400454601 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEEB2392803B8A400454601 /* RequestFactory.swift */; };
 		8406950C27FE7602006934C5 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406950B27FE7602006934C5 /* Login.swift */; };
 		8493936C27FF3D7D00D186E4 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493936B27FF3D7D00D186E4 /* LaunchScreen.swift */; };
+		84DBDF3B2803D95E00D7D76D /* Posting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBDF3A2803D95E00D7D76D /* Posting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		4AEEB2392803B8A400454601 /* RequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		8406950B27FE7602006934C5 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		8493936B27FF3D7D00D186E4 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		84DBDF3A2803D95E00D7D76D /* Posting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				4A68F45527FBF35F0015639B /* Key.swift */,
+				84DBDF3A2803D95E00D7D76D /* Posting.swift */,
 			);
 			path = Key;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				4A912CE527FFE7A900AB69EB /* ReplyToWriting.swift in Sources */,
 				4A912CD227FFE6F600AB69EB /* ImagePicker.swift in Sources */,
 				433AC1F127FE745100C617E7 /* Feed.swift in Sources */,
+				84DBDF3B2803D95E00D7D76D /* Posting.swift in Sources */,
 				433AC1EF27FE745100C617E7 /* Profile.swift in Sources */,
 				4A68F45627FBF35F0015639B /* Key.swift in Sources */,
 				437394C82803AEDB0058B53C /* FriendsProfile.swift in Sources */,
