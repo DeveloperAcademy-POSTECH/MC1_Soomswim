@@ -100,7 +100,8 @@ struct Posting: View {
                 PostingUser()
                 Seperator()
                 Text("\(contentsText)")
-                    .padding()
+                    .padding(.all, 20)
+                    .lineSpacing(10)
             }
             PostingFooter()
                 .frame(width: nil, height: nil, alignment: .bottom)
