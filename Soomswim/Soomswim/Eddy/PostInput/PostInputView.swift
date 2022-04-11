@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TextView: UIViewRepresentable {
-
     @Binding var text: String
     @Binding var font: UIFont
         
@@ -72,7 +71,6 @@ struct postInputView: View {
         ZStack{
             TextEditor(text: self.$text)
             Text(text).opacity(0).padding()
-            
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 800)
         .border(Color.gray, width: 1)
@@ -83,8 +81,6 @@ struct postInputView: View {
                 print("Value of text modified to = \(text)")
             })
         .disableAutocorrection(true)
-
-        
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: btnBack)
         .padding()
@@ -123,6 +119,81 @@ struct postInputView: View {
         
 struct PostInputView_Previews: PreviewProvider {
     static var previews: some View {
-        BeforePostInputView()
+        PostInputView2(name: "Lizzy", viewRouter: ViewRouter())
+    }
+}
+
+struct PostInputView2: View {
+
+    private let viewRouter: ViewRouter
+    private var name: String
+    @State private var text: String = ""
+    
+    @State private var showingImagePicker = false
+    @State var pickedImage: Image?
+
+    @State var showTextEditor = ""
+    @State var itemArray: [String] = []
+    
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    init(name: String, viewRouter: ViewRouter) {
+        self.name = name
+        self.viewRouter = viewRouter
+    }
+
+    var btnBack : some View { Button(action: {
+        self.presentationMode.wrappedValue.dismiss()
+        }) {
+            HStack {
+                Image(systemName: "chevron.backward")
+                    .foregroundColor(.gray)
+            }
+            .padding(.leading, 20)
+        }
+    }
+    
+    var body: some View {
+        VStack{
+            HStack(spacing: 20){
+                self.btnBack
+                Spacer()
+                Button(action:{self.showingImagePicker.toggle()
+                }, label: {
+                    Image(systemName: "camera")
+                }).sheet(isPresented: $showingImagePicker) {
+                    SUImagePicker(sourceType: .photoLibrary) { (image) in
+                        self.pickedImage = Image(uiImage: image)
+                        print(image)
+                    }
+                }
+                .imageScale(.medium)
+                .font(.title3)
+                .foregroundColor(.orange)
+                
+                Button(action: {
+                    guard let request = try? RequestFactory(url: SoomswimURL.mypageStory).request(params: ["writer": self.name, "content": self.text]) else { return print("error") }
+                    NetworkService().request(request, handler: switchPage)
+                } ){
+                    Text("완료")
+                }
+                .foregroundColor(.orange)
+                .font(.body)
+                .padding()
+            }
+            ZStack {
+                TextEditor(text: self.$text)
+            }
+            .border(Color.gray, width: 1)
+            .font(.system(size:15, weight: .regular))
+            .lineSpacing(2.5)
+            .multilineTextAlignment(.center)
+            .disableAutocorrection(true)
+            .padding()
+        }
+    }
+    
+    func switchPage(data: Response<String>, response: URLResponse?) -> Void {
+        self.viewRouter.switchPage(.feed)
     }
 }

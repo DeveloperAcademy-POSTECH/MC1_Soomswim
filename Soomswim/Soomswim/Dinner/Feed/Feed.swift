@@ -10,16 +10,18 @@ import SwiftUI
 struct Feed: View {
     @Binding private var name: String
     @ObservedObject private var stories: DataLoader<Array<Story2>>
+    private let viewRouter: ViewRouter
     
-    init(name: Binding<String>) {
+    init(name: Binding<String>, viewRouter: ViewRouter) {
         self._name = name
         self.stories = DataLoader<Array<Story2>>()
+        self.viewRouter = viewRouter
         self.contents()
     }
     
     var body: some View {
         VStack {
-            Header()
+            Header(name: self.$name, viewRouter: viewRouter)
             ScrollView {
                 if let stories = self.stories.data,
                    stories.count > 0 {
@@ -54,7 +56,7 @@ struct Feed_Previews: PreviewProvider {
     
     static var previews: some View {
         Group {
-            Feed(name: self.$name)
+            Feed(name: self.$name, viewRouter: ViewRouter())
         }
     }
 }

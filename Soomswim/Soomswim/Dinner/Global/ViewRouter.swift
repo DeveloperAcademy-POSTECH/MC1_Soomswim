@@ -12,7 +12,7 @@ protocol SoomswimView: View {
 }
 
 enum Page {
-    case login, feed
+    case login, feed, post
 }
 
 class ViewRouter: ObservableObject {

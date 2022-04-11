@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct FriendsListView: View {
+    @Binding private var name: String
+    private let viewRouter: ViewRouter
+    
+    init(name: Binding<String>, viewRouter: ViewRouter) {
+        self._name = name
+        self.viewRouter = viewRouter
+    }
+    
     var body: some View {
         VStack {
-            Header()
+            Header(name: self.$name, viewRouter: self.viewRouter)
                 .frame(width: nil, height: nil, alignment: .top)
             
             ScrollView() {
@@ -21,9 +29,10 @@ struct FriendsListView: View {
 }
 
 struct FriendsListView_Previews: PreviewProvider {
+    @State static var name: String = "Lizzy"
     static var previews: some View {
         Group {
-            FriendsListView()
+            FriendsListView(name: self.$name, viewRouter: ViewRouter())
         }
     }
 }

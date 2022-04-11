@@ -15,7 +15,13 @@ import SwiftUI
 
 struct MyPageView: View {
     var storys : [Story] = loadJson()
-    var nickname : String = "내 닉네임"
+    @Binding private var name: String
+    private let viewRouter: ViewRouter
+    
+    init(name: Binding<String>, viewRouter: ViewRouter) {
+        self._name = name
+        self.viewRouter = viewRouter
+    }
     
     let columns = [
         GridItem(.fixed(150), spacing: 40),
@@ -25,11 +31,11 @@ struct MyPageView: View {
         NavigationView{
             
             VStack{
-                Header()
+                Header(name: self.$name, viewRouter: self.viewRouter)
                 ScrollView{
                     VStack(alignment: .center, spacing: 15){
                         Profile()
-                        Text(nickname)
+                        Text(self.name)
                             .font(Font.system(size: 15, weight: .semibold))
                     }.frame(height: 140)
                     VStack(alignment: .leading)
@@ -57,7 +63,8 @@ struct MyPageView: View {
 }
 
 struct MyPageView_Previews: PreviewProvider {
+    @State static private var name = "Lizzy"
     static var previews: some View {
-        MyPageView()
+        MyPageView(name: self.$name, viewRouter: ViewRouter())
     }
 }

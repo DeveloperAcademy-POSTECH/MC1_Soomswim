@@ -18,8 +18,9 @@ struct SoomshimUIApp: App {
     var body: some Scene {
         WindowGroup {
             switch self.viewRouter.currentPage {
-            case .feed : HomeTab(name: self.viewRouter.name)
+            case .feed : HomeTab(name: self.viewRouter.name, viewRouter: self.viewRouter)
             case .login : Login(viewRouter: self.viewRouter)
+            case .post : PostInputView2(name: self.viewRouter.name, viewRouter: self.viewRouter)
             }
         }
     }

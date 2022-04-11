@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct Header: View {
+    @Binding private var name: String
+    private let viewRouter: ViewRouter
+    
+    init(name: Binding<String>, viewRouter: ViewRouter) {
+        self._name = name
+        self.viewRouter = viewRouter
+    }
+    
     var body: some View {
         HStack {
             LinearGradient(gradient: Gradient(colors: [Color.mainOrange, Color.mainMidOrange, Color.mainGreen]),
@@ -17,6 +25,17 @@ struct Header: View {
             .frame(width: 130, height: 30, alignment: .center)
             .padding(.leading, 20)
             Spacer()
+            
+            Button(action: {
+                self.viewRouter.switchPage(.post)
+            }, label: {
+                Image(systemName: "plus")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 30, height: 30, alignment: .center)
+                    .foregroundColor(Color(uiColor: UIColor.systemGray))
+            })
+            .padding(.trailing, 20)
 
         }
         .frame(width: nil, height: 67, alignment: .center)
@@ -32,9 +51,10 @@ struct Header: View {
 }
 
 struct HeaderView_Previews: PreviewProvider {
+    @State static var name: String = "Lizy"
     static var previews: some View {
         Group {
-            Header()
+            Header(name: Self.$name, viewRouter: ViewRouter())
         }
     }
 }
