@@ -24,7 +24,7 @@ struct Logo: View {
             Text("내 마음의 안식처")
                 .font(.callout)
                 .foregroundColor(Color.gray)
-            Image("Logo_purple")
+            Image("playstore")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 250, height: 180)
