@@ -26,7 +26,7 @@ struct MyWritingView: View {
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
                     Spacer()
-                    NavigationLink(story.replyCheckPermission ? "답변 보기" : "답변 보기까지 \(story.remainingTime ?? "")", destination: ReplyToWritingView(story: story))
+                    NavigationLink(story.replyCheckPermission ? "답장 보기" : "답장 보기까지 \(story.remainingTime ?? "")", destination: ReplyToWritingView(story: story))
                         .disabled(!story.replyCheckPermission)
                 }
             }

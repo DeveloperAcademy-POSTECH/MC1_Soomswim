@@ -23,7 +23,7 @@ struct MyWritingCardView: View{
             Spacer()
             NavigationLink(destination: ReplyToWritingView(story:story)) {
                 HStack{
-                    Text(story.replyCheckPermission ? "답변 보기" : "답변 보기까지 \(story.remainingTime ?? "")").font(Font.system(size: 11))
+                    Text(story.replyCheckPermission ? "답장 보기" : "답장 보기까지 \(story.remainingTime ?? "")").font(Font.system(size: 11))
                     Spacer()
                     Image(systemName: "chevron.right")
                 }
