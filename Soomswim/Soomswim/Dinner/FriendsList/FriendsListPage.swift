@@ -10,7 +10,7 @@ import SwiftUI
 struct FriendsListPage: View {
     private let viewRouter: ViewRouter
     @State private var name: String
-    @ObservedObject private var friends = DataLoader<Array<User>>()
+    @ObservedObject private var friendRequests = DataLoader<Array<FriendRequest>>()
     @State private var offer: Bool = false
     @State private var friendName: String = ""
     
@@ -54,9 +54,9 @@ struct FriendsListPage: View {
                     .padding(.trailing, 14.5)
                 }
                 ScrollView {
-                    if let data = self.friends.data {
-                        ForEach(data, content: { friend in
-                            FriendsList(user: friend)
+                    if let data = self.friendRequests.data {
+                        ForEach(data, content: { request in
+                            FriendsList(name: self.$name, request: request)
                         })
                     }
                 }
@@ -115,11 +115,11 @@ struct FriendsListPage: View {
         NetworkService().request(request, handler: listup)
     }
     
-    private func listup(data: Response<Array<User>>, response: URLResponse?) {
+    private func listup(data: Response<Array<FriendRequest>>, response: URLResponse?) {
         guard (response as? HTTPURLResponse)?.statusCode == 200,
               let friends = data.data
         else { return print("no contents") }
-        self.friends.fill(data: friends)
+        self.friendRequests.fill(data: friends)
     }
     
     private func follow() {
@@ -129,6 +129,7 @@ struct FriendsListPage: View {
     
     private func followComplete(data: Response<String>, response: URLResponse?) {
         self.offer = false
+        self.contents()
     }
 }
 

@@ -38,6 +38,7 @@
 		4A912CE427FFE7A900AB69EB /* MyWritingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A912CDF27FFE7A900AB69EB /* MyWritingCard.swift */; };
 		4A912CE527FFE7A900AB69EB /* ReplyToWriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A912CE027FFE7A900AB69EB /* ReplyToWriting.swift */; };
 		4A912CE627FFE7A900AB69EB /* MyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A912CE127FFE7A900AB69EB /* MyPage.swift */; };
+		4ABF58C22804734300BA07A0 /* FriendRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABF58C12804734300BA07A0 /* FriendRequest.swift */; };
 		4AEEB23A2803B8A400454601 /* SoomswimURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEEB2342803B8A400454601 /* SoomswimURL.swift */; };
 		4AEEB23B2803B8A400454601 /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEEB2352803B8A400454601 /* DataType.swift */; };
 		4AEEB23C2803B8A400454601 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEEB2362803B8A400454601 /* NetworkService.swift */; };
@@ -82,6 +83,7 @@
 		4A912CDF27FFE7A900AB69EB /* MyWritingCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWritingCard.swift; sourceTree = "<group>"; };
 		4A912CE027FFE7A900AB69EB /* ReplyToWriting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplyToWriting.swift; sourceTree = "<group>"; };
 		4A912CE127FFE7A900AB69EB /* MyPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPage.swift; sourceTree = "<group>"; };
+		4ABF58C12804734300BA07A0 /* FriendRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequest.swift; sourceTree = "<group>"; };
 		4AEEB2342803B8A400454601 /* SoomswimURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoomswimURL.swift; sourceTree = "<group>"; };
 		4AEEB2352803B8A400454601 /* DataType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
 		4AEEB2362803B8A400454601 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				4A3226CA2802A18500DFB348 /* Story.swift */,
 				4A3226CC2802A19B00DFB348 /* User.swift */,
+				4ABF58C12804734300BA07A0 /* FriendRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				4A68F45627FBF35F0015639B /* Key.swift in Sources */,
 				437394C62803AEDB0058B53C /* FriendsListPage.swift in Sources */,
 				437394C92803AEDB0058B53C /* FriendsList.swift in Sources */,
+				4ABF58C22804734300BA07A0 /* FriendRequest.swift in Sources */,
 				4A912CE427FFE7A900AB69EB /* MyWritingCard.swift in Sources */,
 				8493936C27FF3D7D00D186E4 /* LaunchScreen.swift in Sources */,
 				4A619B382801DE880075FD27 /* DataLoader.swift in Sources */,
