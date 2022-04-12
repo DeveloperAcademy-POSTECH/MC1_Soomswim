@@ -32,11 +32,13 @@ struct Header: View {
                 Image(systemName: "plus")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 30, height: 30, alignment: .center)
+                    .frame(width: 20, height: 20, alignment: .center)
                     .foregroundColor(Color(uiColor: UIColor.systemGray))
             })
             .padding(.trailing, 20)
 
+            
+            
         }
         .frame(width: nil, height: 67, alignment: .center)
     }
