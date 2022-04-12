@@ -12,7 +12,7 @@ protocol SoomswimView: View {
 }
 
 enum Page {
-    case login, feed, friends, mypage
+    case login, feed, friends, mypage, posting
 }
 
 class ViewRouter: ObservableObject {
@@ -20,6 +20,7 @@ class ViewRouter: ObservableObject {
     
     @Published private(set) var currentPage: Page
     private(set) var name: String
+    private(set) var story: Story2?
     
     init() {
         if let name = UserDefaults.standard.object(forKey: Self.userKey) as? String {
@@ -33,6 +34,10 @@ class ViewRouter: ObservableObject {
     
     func user(_ name: String) {
         self.name = name
+    }
+    
+    func story(_ story: Story2) {
+        self.story = story
     }
     
     func switchPage(_ page: Page) {
