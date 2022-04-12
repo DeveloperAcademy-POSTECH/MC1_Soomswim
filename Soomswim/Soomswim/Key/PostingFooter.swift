@@ -18,12 +18,13 @@ struct PostingFooter: View {
                 Button(action: {
                     self.popUp = true
                 }) {
-                    Text("댓글쓰기")
-                        .foregroundColor(Color.green)
-                    Image(systemName: "square.and.pencil")
-                          .resizable()
-                          .foregroundColor(Color.green)
-                          .frame(width: 20, height: 20)
+                    Text("답장 쓰기")
+                        .foregroundColor(Color.blue)
+//                    Image(systemName: "envelope")
+//                          .resizable()
+//                          .foregroundColor(Color.green)
+//                          .scaledToFit()
+//                          .frame(width: 20, height: 20)
                 }
                 .padding(.all, 10)
                 .padding(.trailing)

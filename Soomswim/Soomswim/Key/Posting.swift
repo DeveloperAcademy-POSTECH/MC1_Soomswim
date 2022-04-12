@@ -13,7 +13,7 @@ struct Posting: View {
     
     // 댓글쓰기 팝업을 위한 변수
     @State private var popUp: Bool = false
-    @State private var text: String = "여기에 댓글을 남겨주세요"
+    @State private var text: String = "여기에 답장을 남겨주세요"
     @State var nickname = ""
     
     init(story: Story2) {
@@ -53,7 +53,7 @@ struct Posting: View {
                             Spacer()
                             Button(action: {
                                 // 수정필요: back-end 붙이기
-                                print("댓글 작성 clicked")
+                                print("답장 작성 clicked")
                             }) {
                                 Text("보내기")
                                     .foregroundColor(Color.blue)
@@ -72,9 +72,9 @@ struct Posting: View {
                             .frame(width: 300, height: nil, alignment: .leading)
                         
                         TextEditor(text: self.$text)
-                            .foregroundColor(self.text == "여기에 글을 남겨주세요" ? .gray : .primary)
+                            .foregroundColor(self.text == "여기에 답장을 남겨주세요" ? .gray : .primary)
                             .onTapGesture {
-                                if self.text == "여기에 글을 남겨주세요" {
+                                if self.text == "여기에 답장을 남겨주세요" {
                                     self.text = ""
                                 }
                                     
