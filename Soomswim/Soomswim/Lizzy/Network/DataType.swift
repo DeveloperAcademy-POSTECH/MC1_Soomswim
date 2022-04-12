@@ -13,3 +13,4 @@ protocol DataType {
 
 extension Int: DataType {}
 extension String: DataType {}
+extension Bool: DataType {}

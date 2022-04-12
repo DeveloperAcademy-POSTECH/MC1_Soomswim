@@ -50,9 +50,13 @@ struct PostingUser: View {
     var body: some View {
         HStack()
         {
-          FriendsProfile().padding(.trailing, 13.79)
-          FriendsName()
-          Spacer()
+            Profile().padding(.trailing, 13.79)
+            Text("Dinner")
+                .font(Font.system(size: 15, weight: .semibold))
+                .multilineTextAlignment(.leading)
+                .lineSpacing(7)
+                .padding(.vertical, 19.00)
+            Spacer()
         }
         .padding(.horizontal, 38.0)
         .frame(width: nil, height: 80, alignment: .center)

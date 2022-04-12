@@ -16,6 +16,11 @@ import SwiftUI
 struct MyPageView: View {
     var storys : [Story] = loadJson()
     var nickname : String = "내 닉네임"
+    private let viewRouter: ViewRouter
+    
+    init(viewRouter: ViewRouter) {
+        self.viewRouter = viewRouter
+    }
     
     let columns = [
         GridItem(.fixed(150), spacing: 40),
@@ -23,14 +28,32 @@ struct MyPageView: View {
     ]
     var body: some View {
         NavigationView{
-            
             VStack{
                 Header()
                 ScrollView{
-                    VStack(alignment: .center, spacing: 15){
-                        Profile()
-                        Text(nickname)
-                            .font(Font.system(size: 15, weight: .semibold))
+                    ZStack {
+                        VStack {
+                            Profile()
+                            Text(nickname)
+                                .font(Font.system(size: 15, weight: .semibold))
+                        }
+                        HStack {
+                            Spacer()
+                            VStack {
+                                Text("친구")
+                                    .foregroundColor(Color.mainOrange)
+                                    .font(Font.system(size: 15, weight: .semibold))
+                                    .padding(.bottom, 4)
+                                Button(action: {
+                                    self.viewRouter.switchPage(.friends)
+                                }) {
+                                    Text("00")
+                                        .foregroundColor(Color(uiColor: UIColor.systemGray))
+                                        .font(Font.system(size: 13, weight: .medium))
+                                }
+                            }
+                            .padding(.trailing, 52)
+                        }
                     }.frame(height: 140)
                     VStack(alignment: .leading)
                     {
@@ -58,6 +81,6 @@ struct MyPageView: View {
 
 struct MyPageView_Previews: PreviewProvider {
     static var previews: some View {
-        MyPageView()
+        MyPageView(viewRouter: ViewRouter())
     }
 }
