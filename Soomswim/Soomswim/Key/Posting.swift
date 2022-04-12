@@ -8,10 +8,16 @@
 import SwiftUI
 
 struct PostingHeader: View {
+    private let viewRouter: ViewRouter
+    
+    init(viewRouter: ViewRouter) {
+        self.viewRouter = viewRouter
+    }
+    
     var body: some View {
         HStack {
             Button(action: {
-                print("clicked 뒤로가기")
+                self.viewRouter.switchPage(.feed)
             }) {
                 Image(systemName: "chevron.backward")
                       .resizable()
@@ -104,7 +110,7 @@ struct Posting: View {
     
     var body: some View {
         VStack {
-            PostingHeader()
+            PostingHeader(viewRouter: self.viewRouter)
                 .frame(width: nil, height: nil, alignment: .top)
             ScrollView{
                 PostingUser()
