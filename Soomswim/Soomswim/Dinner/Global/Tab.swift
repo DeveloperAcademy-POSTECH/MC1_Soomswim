@@ -28,7 +28,7 @@ struct HomeTab: View {
                 }
                 .tag(0)
 
-            MyPageView(viewRouter: self.viewRouter)
+            MyPageView(name: self.$name, viewRouter: self.viewRouter)
                 .tabItem {
                     Image(systemName: "square.and.pencil")
                     Text("My Page")
