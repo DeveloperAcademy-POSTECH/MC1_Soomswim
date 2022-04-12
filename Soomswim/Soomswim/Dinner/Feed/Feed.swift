@@ -28,7 +28,7 @@ struct Feed: View {
                     ForEach(Array(zip(Array(0..<stories.count), stories)), id: \.0, content: { (idx, story) in
                         if idx != 0 { Seperator() }
                         Button(action: {
-                            self.viewRouter.story(story.id)
+                            self.viewRouter.story(story)
                             self.viewRouter.switchPage(.posting)
                         }) {
                             switch idx % 2 == 0 {

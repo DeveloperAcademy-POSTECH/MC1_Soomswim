@@ -24,7 +24,10 @@ struct SoomshimUIApp: App {
                 HomeTab(name: self.viewRouter.name, viewRouter: self.viewRouter, index: 1)
             case .login : Login(viewRouter: self.viewRouter)
             case .friends : FriendsListPage(name: self.viewRouter.name, viewRouter: self.viewRouter)
-            case .posting : Posting(viewRouter: self.viewRouter, storyId: self.viewRouter.storyId)
+            case .posting :
+                if let story = self.viewRouter.story {
+                    Posting(viewRouter: self.viewRouter, story: story)
+                }
             }
         }
     }
