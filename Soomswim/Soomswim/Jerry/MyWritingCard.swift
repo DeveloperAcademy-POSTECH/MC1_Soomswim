@@ -8,22 +8,29 @@
 import SwiftUI
 
 struct MyWritingCardView: View{
-    var story: Story
+    @Binding private var name: String
+    private let story: Story2
+    private var replyCheckPermission: Bool
+    init(name: Binding<String>, story: Story2){
+        self._name = name
+        self.story = story
+        self.replyCheckPermission = story.reply_check_permission ?? false
+    }
 
     var body: some View{
         VStack(alignment:.leading){
             VStack(alignment: .leading, spacing: 35) {
-                Text(story.date)
+                Text(self.story.date)
                     .font(Font.system(size: 14, weight: .bold))
-                Text(story.content)
+                Text(self.story.content)
                     .font(Font.system(size: 12, weight: .medium))
                     .lineLimit(2)
             }
             .padding(10)
             Spacer()
-            NavigationLink(destination: ReplyToWritingView(story:story)) {
+            NavigationLink(destination: ReplyToWritingView(name: self.$name, id: self.story.id, date:story.date)) {
                 HStack{
-                    Text(story.replyCheckPermission ? "답장 보기" : "답장 보기까지 \(story.remainingTime ?? "")").font(Font.system(size: 11))
+                    Text(replyCheckPermission ? "답장 보기" : "\(self.story.remaining_time ?? "")").font(Font.system(size: 11))
                     Spacer()
                     Image(systemName: "chevron.right")
                 }
@@ -31,7 +38,7 @@ struct MyWritingCardView: View{
                 .frame(height: 47)
             }
             .background(Color.mainPurple)
-            .disabled(!story.replyCheckPermission)
+            .disabled(!replyCheckPermission)
         }
         .background(.white)
         .cornerRadius(12)

@@ -22,7 +22,7 @@ struct HomeTab: View {
                     Text("Feed")
                 }
 
-            MyPageView()
+            MyPageView(name: self.$name)
                 .tabItem {
                     Image(systemName: "square.and.pencil")
                     Text("My Page")
