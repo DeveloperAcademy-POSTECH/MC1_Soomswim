@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-extension Color {
-    static let subPurple: Color = Color(red: 120/255, green: 59/255, blue: 139/255)
-    static let mainPurple: Color = Color(red: 228/255, green: 198/255, blue: 255/255)
-    static let lightGray: Color = Color(red: 240/255, green: 240/255, blue: 245/255)
-}
-
 struct Login: View {
     @State var username: String = ""
     private let viewRouter: ViewRouter

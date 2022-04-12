@@ -13,6 +13,16 @@ extension Color {
     static let mainOrange: Color = Color(red: 255/255, green: 87/255, blue: 0)
     static let FriendsListBlue: Color = Color(red: 39/255, green: 0, blue: 255/255)
     static let FriendsListGrey: Color = Color(red: 247/255, green: 247/255, blue: 247/255)
+    static let subPurple: Color = Color(red: 120/255, green: 59/255, blue: 139/255)
+    static let mainPurple: Color = Color(red: 228/255, green: 198/255, blue: 255/255)
+    static let lightGray: Color = Color(red: 240/255, green: 240/255, blue: 245/255)
+    static let pointPurple: Color = Color(red: 205/255, green: 72/255, blue: 221/255)
+    static let logoGradient: LinearGradient = LinearGradient(
+        colors: [Color.mainPurple, Color.pointPurple],
+        startPoint: .top,
+        endPoint: .bottom
+    )
+  
     static let messageGradient : [LinearGradient] = [
         LinearGradient(
         colors: [Color(red: 252/255, green: 37/255, blue: 151/255), Color(red: 250/255, green: 253/255, blue: 163/255)], startPoint: .topLeading, endPoint: .bottomTrailing),
@@ -34,5 +44,4 @@ extension Color {
     static let backgroundGradient = LinearGradient(
         colors: [Color.mainPurple, Color.subPurple, .black],
         startPoint: .topLeading ,endPoint: .bottomTrailing)
-    
 }
