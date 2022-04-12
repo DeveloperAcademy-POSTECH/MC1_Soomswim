@@ -19,21 +19,23 @@ struct HomeTab: View {
     }
     
     var body: some View {
-        TabView(selection: self.$index) {
-            Feed(viewRouter: self.viewRouter,
-                 name: self.$name)
-                .tabItem {
-                    Image(systemName: "list.dash")
-                    Text("Feed")
-                }
-                .tag(0)
+        NavigationView{
+            TabView(selection: self.$index) {
+                Feed(viewRouter: self.viewRouter,
+                     name: self.$name)
+                    .tabItem {
+                        Image(systemName: "list.dash")
+                        Text("Feed")
+                    }
+                    .tag(0)
 
-            MyPageView(name: self.$name, viewRouter: self.viewRouter)
-                .tabItem {
-                    Image(systemName: "square.and.pencil")
-                    Text("My Page")
-                }
-                .tag(1)
+                MyPageView(name: self.$name, viewRouter: self.viewRouter)
+                    .tabItem {
+                        Image(systemName: "square.and.pencil")
+                        Text("My Page")
+                    }
+                    .tag(1)
+            }
         }
     }
 }

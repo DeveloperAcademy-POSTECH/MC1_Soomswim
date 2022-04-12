@@ -30,59 +30,57 @@ struct MyPageView: View {
         GridItem(.fixed(150), spacing: 35)
     ]
     var body: some View {
-        NavigationView{
-            VStack{
-                Header()
-                ScrollView{
-                    ZStack {
-                        VStack {
-                            Profile()
-                            Text(self.name)
-                                .font(Font.system(size: 15, weight: .semibold))
-                        }
-                        HStack {
-                            Spacer()
-                            VStack {
-                                Text("친구")
-                                    .foregroundColor(Color.mainOrange)
-                                    .font(Font.system(size: 15, weight: .semibold))
-                                    .padding(.bottom, 4)
-                                Button(action: {
-                                    self.viewRouter.switchPage(.friends)
-                                }) {
-                                    Text("00")
-                                        .foregroundColor(Color(uiColor: UIColor.systemGray))
-                                        .font(Font.system(size: 13, weight: .medium))
-                                }
-                            }
-                            .padding(.trailing, 52)
-                        }
-                    }.frame(height: 140)
-                    VStack(alignment: .leading)
-                    {
-                        Text("나의 페이퍼")
-                            .font(Font.system(size: 19, weight: .semibold))
-                            .padding()
-                        
-                        if let mystories = self.mystories.data,
-                           mystories.count > 0 {
-                            LazyVGrid(columns: columns, spacing: 20) {
-                                ForEach(Array(zip(Array(0..<mystories.count), mystories)), id: \.0){(idx, mystory) in
-                                    NavigationLink(destination: MyWritingView(name: self.$name, id: mystory.id)){
-                                        MyWritingCardView(name: self.$name, story: mystory)
-                                    }
-                                    .buttonStyle(PlainButtonStyle())
-                                }
-                                
-                            }
-                        }
-                        else {Text("")}
+        VStack{
+            Header()
+            ScrollView{
+                ZStack {
+                    VStack {
+                        Profile()
+                        Text(self.name)
+                            .font(Font.system(size: 15, weight: .semibold))
                     }
+                    HStack {
+                        Spacer()
+                        VStack {
+                            Text("친구")
+                                .foregroundColor(Color.mainOrange)
+                                .font(Font.system(size: 15, weight: .semibold))
+                                .padding(.bottom, 4)
+                            Button(action: {
+                                self.viewRouter.switchPage(.friends)
+                            }) {
+                                Text("00")
+                                    .foregroundColor(Color(uiColor: UIColor.systemGray))
+                                    .font(Font.system(size: 13, weight: .medium))
+                            }
+                        }
+                        .padding(.trailing, 52)
+                    }
+                }.frame(height: 140)
+                VStack(alignment: .leading)
+                {
+                    Text("나의 페이퍼")
+                        .font(Font.system(size: 19, weight: .semibold))
+                        .padding()
+                    
+                    if let mystories = self.mystories.data,
+                       mystories.count > 0 {
+                        LazyVGrid(columns: columns, spacing: 20) {
+                            ForEach(Array(zip(Array(0..<mystories.count), mystories)), id: \.0){(idx, mystory) in
+                                NavigationLink(destination: MyWritingView(name: self.$name, id: mystory.id)){
+                                    MyWritingCardView(name: self.$name, story: mystory)
+                                }
+                                .buttonStyle(PlainButtonStyle())
+                            }
+                            
+                        }
+                    }
+                    else {Text("")}
                 }
             }
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarHidden(true)
         }
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarHidden(true)
     }
     
     private func contents() {
