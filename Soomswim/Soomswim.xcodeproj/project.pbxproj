@@ -47,6 +47,7 @@
 		4AEEB23F2803B8A400454601 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEEB2392803B8A400454601 /* RequestFactory.swift */; };
 		8406950C27FE7602006934C5 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406950B27FE7602006934C5 /* Login.swift */; };
 		8493936C27FF3D7D00D186E4 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493936B27FF3D7D00D186E4 /* LaunchScreen.swift */; };
+		AF38078D2803C179007F2F73 /* Posting-key.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38078C2803C179007F2F73 /* Posting-key.swift */; };
 		84DBDF3B2803D95E00D7D76D /* Posting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBDF3A2803D95E00D7D76D /* Posting.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		4AEEB2392803B8A400454601 /* RequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		8406950B27FE7602006934C5 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		8493936B27FF3D7D00D186E4 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		AF38078C2803C179007F2F73 /* Posting-key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Posting-key.swift"; sourceTree = "<group>"; };
 		84DBDF3A2803D95E00D7D76D /* Posting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				4A68F45527FBF35F0015639B /* Key.swift */,
+				AF38078C2803C179007F2F73 /* Posting-key.swift */,
 				84DBDF3A2803D95E00D7D76D /* Posting.swift */,
 			);
 			path = Key;
@@ -355,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF38078D2803C179007F2F73 /* Posting-key.swift in Sources */,
 				4AEEB23D2803B8A400454601 /* HTTPMethod.swift in Sources */,
 				4A912CD427FFE6F600AB69EB /* PostInputView.swift in Sources */,
 				4A912CE527FFE7A900AB69EB /* ReplyToWriting.swift in Sources */,
