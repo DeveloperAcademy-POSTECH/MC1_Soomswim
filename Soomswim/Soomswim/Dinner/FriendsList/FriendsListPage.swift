@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct FriendsListPage: View {
-    private let viewRouter: ViewRouter
     @State private var name: String
     @ObservedObject private var friendRequests = DataLoader<Array<FriendRequest>>()
     @State private var offer: Bool = false
     @State private var friendName: String = ""
     
-    init(name: String, viewRouter: ViewRouter) {
+    init(name: String) {
         self.name = name
-        self.viewRouter = viewRouter
         self.contents()
     }
     
@@ -24,34 +22,10 @@ struct FriendsListPage: View {
         ZStack {
             VStack {
                 HStack {
-                    Button(action: {
-                        self.viewRouter.switchPage(.mypage)
-                    }) {
-                        Image(systemName: "chevron.backward")
-                            .resizable()
-                            .frame(width: 12, height: 21)
-                            .foregroundColor(Color(uiColor: UIColor.systemGray2))
-                    }
-                    .padding(.leading, 14)
-                    Spacer()
-                    HeaderLogo()
-                        .padding(.trailing, 12)
-                }
-                .frame(width: nil, height: 67, alignment: .center)
-                HStack {
                     Text("친구 리스트")
                         .font(Font.system(size: 19, weight: .semibold))
                         .padding(.leading, 14.5)
                     Spacer()
-                    Button(action: {
-                        self.offer = true
-                    }, label: {
-                        Image(systemName: "plus")
-                            .resizable()
-                            .foregroundColor(Color.gray)
-                            .frame(width: 23, height: 23)
-                    })
-                    .padding(.trailing, 14.5)
                 }
                 ScrollView {
                     if let data = self.friendRequests.data {
@@ -76,7 +50,7 @@ struct FriendsListPage: View {
                                 Image(systemName: "xmark")
                                     .resizable()
                                     .foregroundColor(Color.gray)
-                                    .frame(width: 20, height: 20)
+                                    .frame(width: 17, height: 17)
                             }
                             .padding(.trailing, 5)
                             .padding(.top, 10)
@@ -108,6 +82,18 @@ struct FriendsListPage: View {
                 
             }
         }
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarItems(leading: BackButton())
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            Button(action: {
+                self.offer = true
+            }, label: {
+                Image(systemName: "plus")
+                    .foregroundColor(Color.gray)
+            })
+            .padding(.trailing, 14.5)
+        }
     }
     
     private func contents() {
@@ -136,7 +122,7 @@ struct FriendsListPage: View {
 struct FriendsListPage_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            FriendsListPage(name: "Lizzy", viewRouter: ViewRouter())
+            FriendsListPage(name: "Lizzy")
         }
     }
 }

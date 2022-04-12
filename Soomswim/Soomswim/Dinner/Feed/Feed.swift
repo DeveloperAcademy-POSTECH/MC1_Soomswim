@@ -8,29 +8,24 @@
 import SwiftUI
 
 struct Feed: View {
-    private let viewRouter: ViewRouter
     @Binding private var name: String
     @ObservedObject private var stories: DataLoader<Array<Story2>>
     
-    init(viewRouter: ViewRouter, name: Binding<String>) {
+    init(name: Binding<String>) {
         self._name = name
         self.stories = DataLoader<Array<Story2>>()
-        self.viewRouter = viewRouter
         self.contents()
     }
     
     var body: some View {
         VStack {
-            Header()
+            Header(name: self.$name)
             ScrollView {
                 if let stories = self.stories.data,
                    stories.count > 0 {
                     ForEach(Array(zip(Array(0..<stories.count), stories)), id: \.0, content: { (idx, story) in
                         if idx != 0 { Seperator() }
-                        Button(action: {
-                            self.viewRouter.story(story)
-                            self.viewRouter.switchPage(.posting)
-                        }) {
+                        NavigationLink(destination: Posting(story: story)) {
                             switch idx % 2 == 0 {
                             case true : StoryPreview1(story: story)
                             case false : StoryPreview2(story: story)
@@ -41,6 +36,7 @@ struct Feed: View {
                 }
                 else { Text("No Contents") }
             }
+            Spacer()
         }
     }
     
@@ -62,7 +58,7 @@ struct Feed_Previews: PreviewProvider {
     
     static var previews: some View {
         Group {
-            Feed(viewRouter: ViewRouter(), name: self.$name)
+            Feed(name: self.$name)
         }
     }
 }

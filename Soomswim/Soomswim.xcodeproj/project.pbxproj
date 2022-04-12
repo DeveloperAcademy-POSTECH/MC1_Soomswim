@@ -23,6 +23,9 @@
 		437394C92803AEDB0058B53C /* FriendsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437394C42803AEDB0058B53C /* FriendsList.swift */; };
 		4A3226CB2802A18500DFB348 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3226CA2802A18500DFB348 /* Story.swift */; };
 		4A3226CD2802A19B00DFB348 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3226CC2802A19B00DFB348 /* User.swift */; };
+		4A5BB20E28055B080037D24E /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5BB20D28055B080037D24E /* BackButton.swift */; };
+		4A5BB21228055F430037D24E /* PostingUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5BB21128055F430037D24E /* PostingUser.swift */; };
+		4A5BB21A28055FED0037D24E /* PostingFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5BB21928055FED0037D24E /* PostingFooter.swift */; };
 		4A619B362801BFE10075FD27 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A619B352801BFE10075FD27 /* ViewRouter.swift */; };
 		4A619B382801DE880075FD27 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A619B372801DE880075FD27 /* DataLoader.swift */; };
 		4A68F45427FBF34E0015639B /* Dinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68F45327FBF34E0015639B /* Dinner.swift */; };
@@ -71,6 +74,9 @@
 		4A3226CA2802A18500DFB348 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		4A3226CC2802A19B00DFB348 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4A3BEB0D27FF063C002AA043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4A5BB20D28055B080037D24E /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		4A5BB21128055F430037D24E /* PostingUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingUser.swift; sourceTree = "<group>"; };
+		4A5BB21928055FED0037D24E /* PostingFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostingFooter.swift; sourceTree = "<group>"; };
 		4A619B352801BFE10075FD27 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		4A619B372801DE880075FD27 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		4A68F45327FBF34E0015639B /* Dinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dinner.swift; sourceTree = "<group>"; };
@@ -182,6 +188,7 @@
 				4AEEB2332803B8A400454601 /* Network */,
 				4A3226C82802A16900DFB348 /* Model */,
 				4A619B372801DE880075FD27 /* DataLoader.swift */,
+				4A5BB20D28055B080037D24E /* BackButton.swift */,
 			);
 			path = Lizzy;
 			sourceTree = "<group>";
@@ -204,7 +211,9 @@
 			children = (
 				4A68F45527FBF35F0015639B /* Key.swift */,
 				AF38078C2803C179007F2F73 /* Posting-key.swift */,
+				4A5BB21928055FED0037D24E /* PostingFooter.swift */,
 				84DBDF3A2803D95E00D7D76D /* Posting.swift */,
+				4A5BB21128055F430037D24E /* PostingUser.swift */,
 			);
 			path = Key;
 			sourceTree = "<group>";
@@ -365,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF38078D2803C179007F2F73 /* Posting-key.swift in Sources */,
+				4A5BB21A28055FED0037D24E /* PostingFooter.swift in Sources */,
 				4AEEB23D2803B8A400454601 /* HTTPMethod.swift in Sources */,
 				4A912CD427FFE6F600AB69EB /* PostInputView.swift in Sources */,
 				4A912CE527FFE7A900AB69EB /* ReplyToWriting.swift in Sources */,
@@ -390,6 +400,7 @@
 				4AEEB23E2803B8A400454601 /* Response.swift in Sources */,
 				8406950C27FE7602006934C5 /* Login.swift in Sources */,
 				4A619B362801BFE10075FD27 /* ViewRouter.swift in Sources */,
+				4A5BB20E28055B080037D24E /* BackButton.swift in Sources */,
 				433AC1F227FE745100C617E7 /* Separator.swift in Sources */,
 				433AC20327FE74A700C617E7 /* Color.swift in Sources */,
 				4A912CD127FFE6F600AB69EB /* BeforePostInputView.swift in Sources */,
@@ -397,6 +408,7 @@
 				4AEEB23A2803B8A400454601 /* SoomswimURL.swift in Sources */,
 				4A3226CD2802A19B00DFB348 /* User.swift in Sources */,
 				4AEEB23B2803B8A400454601 /* DataType.swift in Sources */,
+				4A5BB21228055F430037D24E /* PostingUser.swift in Sources */,
 				433AC1F927FE746800C617E7 /* Header.swift in Sources */,
 				433AC1EE27FE745100C617E7 /* StoryContentPreview.swift in Sources */,
 				433AC1FA27FE746800C617E7 /* Tab.swift in Sources */,

@@ -8,16 +8,24 @@
 import SwiftUI
 
 struct Header: View {
+    @Binding private var name: String
+    
+    init(name: Binding<String>) {
+        self._name = name
+    }
+    
     var body: some View {
         HStack {
-            LinearGradient(gradient: Gradient(colors: [Color.mainOrange, Color.mainMidOrange, Color.mainGreen]),
-                           startPoint: .leading,
-                           endPoint: .trailing)
-            .mask(self.logo)
-            .frame(width: 130, height: 30, alignment: .center)
-            .padding(.leading, 20)
+            LogoEnglish()
             Spacer()
-
+            NavigationLink(destination: PostInputView(name: self.name)) {
+                Image(systemName: "square.and.pencil")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 20, height: 20, alignment: .center)
+                    .foregroundColor(Color(uiColor: UIColor.systemGray))
+            }
+            .padding(.trailing, 20)
         }
         .frame(width: nil, height: 67, alignment: .center)
     }
@@ -28,31 +36,5 @@ struct Header: View {
             .fontWeight(.black)
             .lineSpacing(25)
             .font(.system(size: 21))
-    }
-}
-
-struct HeaderLogo: View {
-    var body: some View {
-        LinearGradient(gradient: Gradient(colors: [Color.mainOrange, Color.mainMidOrange, Color.mainGreen]),
-                       startPoint: .leading,
-                       endPoint: .trailing)
-        .mask(self.logo)
-        .frame(width: 130, height: 30, alignment: .center)
-    }
-    
-    private var logo: some View {
-        Text("Soomswim")
-            .italic()
-            .fontWeight(.black)
-            .lineSpacing(25)
-            .font(.system(size: 21))
-    }
-}
-
-struct HeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            Header()
-        }
     }
 }

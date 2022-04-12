@@ -42,10 +42,7 @@ extension TextView.Coordinator: UITextViewDelegate {
 }
 
 
-struct postInputView: View {
-
-    @Binding var shouldPopToRootView : Bool
-
+struct PostInputView: View {
     @State private var text: String = ""
     
     @State private var showingImagePicker = false
@@ -53,41 +50,27 @@ struct postInputView: View {
 
     @State var showTextEditor = ""
     @State var itemArray: [String] = []
-    
+    private let name: String
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-
-    var btnBack : some View { Button(action: {
-        self.presentationMode.wrappedValue.dismiss()
-        }) {
-            HStack {
-                Image(systemName: "chevron.backward")
-                    .foregroundColor(.gray)
-            }
-        }
+    
+    init(name: String) {
+        self.name = name
     }
     
-    
     var body: some View {
-        ZStack{
+        VStack {
             TextEditor(text: self.$text)
-            Text(text).opacity(0).padding()
-            
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 800)
+            .border(Color.gray, width: 1)
+            .font(.system(size:15, weight: .regular))
+            .lineSpacing(2.5)
+            .multilineTextAlignment(.center)
+            .disableAutocorrection(true)
+            .padding()
         }
-        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 800)
-        .border(Color.gray, width: 1)
-        .font(.system(size:15, weight: .regular))
-        .lineSpacing(2.5)
-        .multilineTextAlignment(.center)
-        .onChange(of: text, perform: { value in
-                print("Value of text modified to = \(text)")
-            })
-        .disableAutocorrection(true)
-
-        
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: btnBack)
-        .padding()
+        .navigationBarItems(leading: BackButton())
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 HStack(spacing: 20){
@@ -104,8 +87,10 @@ struct postInputView: View {
                     .font(.title3)
                     .foregroundColor(.orange)
                     
-                    
-                    Button(action: { self.shouldPopToRootView = false } ){
+                    Button(action: {
+                        guard let request = try? RequestFactory(url: SoomswimURL.mypageStroy).request(params: ["writer": self.name, "content": self.text]) else { return print("error") }
+                        NetworkService().request(request, handler: switchPage)
+                    }) {
                         Text("완료")
                     }
                     .foregroundColor(.orange)
@@ -113,8 +98,15 @@ struct postInputView: View {
                 }
             }
         }
+        .navigationBarTitleDisplayMode(.inline)
     }
+    
+    func switchPage(data: Response<String>, response: URLResponse?) -> Void {
+        DispatchQueue.main.async {
+            self.presentationMode.wrappedValue.dismiss()
         }
+    }
+}
 //extension View {
 //    func hideKeyboard() {
 //        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)

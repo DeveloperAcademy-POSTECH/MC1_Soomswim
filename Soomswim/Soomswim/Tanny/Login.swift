@@ -27,42 +27,16 @@ struct Login: View {
     func switchPage(data: Response<String>, response: URLResponse?) -> Void {
         UserDefaults.standard.set(self.username, forKey: "name")
         self.viewRouter.user(self.username)
-        self.viewRouter.switchPage(.feed)
+        self.viewRouter.switchPage(.home)
     }
 }
 
 struct LogoEnglish: View {
     var body: some View {
-        Group {
-            Text("S")
-                .italic()
-                .fontWeight(.black)
-                .foregroundColor(Color.mainPurple)
-                .font(.system(size: 50)) +
-            Text("oom")
-                .italic()
-                .fontWeight(.black)
-                .font(.system(size: 40)) +
-            Text("s")
-                .italic()
-                .fontWeight(.black)
-                .foregroundColor(Color.mainPurple)
-                .font(.system(size: 50)) +
-            Text("wim")
-                .italic()
-                .fontWeight(.black)
-                .font(.system(size: 40))
-        }
-            .frame(width: 250, height: 100, alignment: .center)
+        Image("Logo")
+            .resizable()
+            .frame(width: 119, height: 25, alignment: .center)
             .padding()
-        
-//        Text("Soomswim")
-//            .italic()
-//            .fontWeight(.black)
-//            .lineSpacing(25)
-//            .font(.system(size: 40))
-//            .frame(width: 250, height: 100, alignment: .center)
-//            .padding()
     }
 }
 

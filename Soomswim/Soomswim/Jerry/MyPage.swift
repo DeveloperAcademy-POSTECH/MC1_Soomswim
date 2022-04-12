@@ -6,22 +6,14 @@
 //
 
 import SwiftUI
-//extension UINavigationController {
-//    // Remove back button text
-//    open override func viewWillLayoutSubviews() {
-//        navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-//    }
-//}
 
 struct MyPageView: View {
     @Binding private var name: String
     @ObservedObject private var mystories: DataLoader<Array<Story2>>
-    private let viewRouter: ViewRouter
 
-    init(name: Binding<String>, viewRouter: ViewRouter) {
+    init(name: Binding<String>) {
         self._name = name
         self.mystories = DataLoader<Array<Story2>>()
-        self.viewRouter = viewRouter
         self.contents()
     }
     
@@ -31,7 +23,7 @@ struct MyPageView: View {
     ]
     var body: some View {
         VStack{
-            Header()
+            Header(name: self.$name)
             ScrollView{
                 ZStack {
                     VStack {
@@ -46,9 +38,7 @@ struct MyPageView: View {
                                 .foregroundColor(Color.mainOrange)
                                 .font(Font.system(size: 15, weight: .semibold))
                                 .padding(.bottom, 4)
-                            Button(action: {
-                                self.viewRouter.switchPage(.friends)
-                            }) {
+                            NavigationLink(destination: FriendsListPage(name: self.name)) {
                                 Text("00")
                                     .foregroundColor(Color(uiColor: UIColor.systemGray))
                                     .font(Font.system(size: 13, weight: .medium))
@@ -78,6 +68,7 @@ struct MyPageView: View {
                     else {Text("")}
                 }
             }
+            Spacer()
         }
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarHidden(true)
@@ -100,6 +91,6 @@ struct MyPageView_Previews: PreviewProvider {
     @State static private var name: String = "Lizzy"
 
     static var previews: some View {
-        MyPageView(name: self.$name, viewRouter: ViewRouter())
+        MyPageView(name: self.$name)
     }
 }
