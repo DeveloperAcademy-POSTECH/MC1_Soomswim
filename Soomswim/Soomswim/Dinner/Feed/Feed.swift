@@ -38,6 +38,9 @@ struct Feed: View {
             }
             Spacer()
         }
+        .onAppear() {
+            self.contents()
+        }
     }
     
     private func contents() {
