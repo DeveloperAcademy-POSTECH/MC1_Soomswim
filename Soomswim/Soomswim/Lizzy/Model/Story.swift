@@ -12,4 +12,8 @@ struct Story2: Codable {
     let date: String
     let content: String
     let writer: User
+    var reply_check_permission: Bool?
+    var remaining_time: String?
+    var reply_existence: Bool?
+    var reply_availability: Bool?
 }
