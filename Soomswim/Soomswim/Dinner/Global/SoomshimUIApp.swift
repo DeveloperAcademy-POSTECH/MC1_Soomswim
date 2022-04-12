@@ -24,8 +24,11 @@ struct SoomshimUIApp: App {
                 HomeTab(name: self.viewRouter.name, viewRouter: self.viewRouter, index: 1)
             case .login : Login(viewRouter: self.viewRouter)
             case .friends : FriendsListPage(name: self.viewRouter.name, viewRouter: self.viewRouter)
+            case .posting : Posting(viewRouter: self.viewRouter, storyId: self.viewRouter.storyId)
             }
         }
     }
 }
 
+// 1. ViewRouter 에 페이지 추가
+// 2. 해당 

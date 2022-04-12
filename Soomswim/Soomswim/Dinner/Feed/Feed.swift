@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct Feed: View {
+    private let viewRouter: ViewRouter
     @Binding private var name: String
     @ObservedObject private var stories: DataLoader<Array<Story2>>
     
-    init(name: Binding<String>) {
+    init(viewRouter: ViewRouter, name: Binding<String>) {
         self._name = name
         self.stories = DataLoader<Array<Story2>>()
+        self.viewRouter = viewRouter
         self.contents()
     }
     
@@ -25,10 +27,16 @@ struct Feed: View {
                    stories.count > 0 {
                     ForEach(Array(zip(Array(0..<stories.count), stories)), id: \.0, content: { (idx, story) in
                         if idx != 0 { Seperator() }
-                        switch idx % 2 == 0 {
-                        case true : StoryPreview1(story: story)
-                        case false : StoryPreview2(story: story)
+                        Button(action: {
+                            self.viewRouter.story(story.id)
+                            self.viewRouter.switchPage(.posting)
+                        }) {
+                            switch idx % 2 == 0 {
+                            case true : StoryPreview1(story: story)
+                            case false : StoryPreview2(story: story)
+                            }
                         }
+                        .foregroundColor(Color.black)
                     })
                 }
                 else { Text("No Contents") }
@@ -54,7 +62,7 @@ struct Feed_Previews: PreviewProvider {
     
     static var previews: some View {
         Group {
-            Feed(name: self.$name)
+            Feed(viewRouter: ViewRouter(), name: self.$name)
         }
     }
 }
