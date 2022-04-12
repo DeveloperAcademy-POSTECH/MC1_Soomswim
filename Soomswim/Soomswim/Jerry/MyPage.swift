@@ -72,6 +72,9 @@ struct MyPageView: View {
         }
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarHidden(true)
+        .onAppear() {
+            self.contents()
+        }
     }
     
     private func contents() {
