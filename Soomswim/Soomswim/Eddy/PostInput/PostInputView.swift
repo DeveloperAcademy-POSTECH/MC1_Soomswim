@@ -43,7 +43,7 @@ extension TextView.Coordinator: UITextViewDelegate {
 
 
 struct PostInputView: View {
-    @State private var text: String = ""
+    @State private var text: String = "당신의 이야기를 들려주세요."
     
     @State private var showingImagePicker = false
     @State var pickedImage: Image?
@@ -61,6 +61,12 @@ struct PostInputView: View {
     var body: some View {
         VStack {
             TextEditor(text: self.$text)
+                .foregroundColor(self.text == "당신의 이야기를 들려주세요." ? .gray : .primary)
+                .onTapGesture {
+                  if self.text == "당신의 이야기를 들려주세요." {
+                    self.text = ""
+                  }
+                }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 800)
             .border(Color.gray, width: 1)
             .font(.system(size:15, weight: .regular))
