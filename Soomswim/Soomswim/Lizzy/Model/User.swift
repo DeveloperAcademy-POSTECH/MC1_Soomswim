@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct User: Codable {
+struct User: Codable, Identifiable {
     let id: Int
     let name: String
     let profile: String
 }
+

@@ -14,14 +14,14 @@ import SwiftUI
 //}
 
 struct MyPageView: View {
-//    var storys : [Story] = loadJson()
-    
     @Binding private var name: String
     @ObservedObject private var mystories: DataLoader<Array<Story2>>
-    
-    init(name: Binding<String>) {
+    private let viewRouter: ViewRouter
+
+    init(name: Binding<String>, viewRouter: ViewRouter) {
         self._name = name
         self.mystories = DataLoader<Array<Story2>>()
+        self.viewRouter = viewRouter
         self.contents()
     }
     
@@ -31,14 +31,32 @@ struct MyPageView: View {
     ]
     var body: some View {
         NavigationView{
-            
             VStack{
                 Header()
                 ScrollView{
-                    VStack(alignment: .center, spacing: 15){
-                        Profile()
-                        Text(self.name)
-                            .font(Font.system(size: 15, weight: .semibold))
+                    ZStack {
+                        VStack {
+                            Profile()
+                            Text(self.name)
+                                .font(Font.system(size: 15, weight: .semibold))
+                        }
+                        HStack {
+                            Spacer()
+                            VStack {
+                                Text("친구")
+                                    .foregroundColor(Color.mainOrange)
+                                    .font(Font.system(size: 15, weight: .semibold))
+                                    .padding(.bottom, 4)
+                                Button(action: {
+                                    self.viewRouter.switchPage(.friends)
+                                }) {
+                                    Text("00")
+                                        .foregroundColor(Color(uiColor: UIColor.systemGray))
+                                        .font(Font.system(size: 13, weight: .medium))
+                                }
+                            }
+                            .padding(.trailing, 52)
+                        }
                     }.frame(height: 140)
                     VStack(alignment: .leading)
                     {
@@ -84,6 +102,6 @@ struct MyPageView_Previews: PreviewProvider {
     @State static private var name: String = "Lizzy"
 
     static var previews: some View {
-        MyPageView(name: self.$name)
+        MyPageView(name: self.$name, viewRouter: ViewRouter())
     }
 }

@@ -19,11 +19,7 @@
 		433AC1FA27FE746800C617E7 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AC1F527FE746800C617E7 /* Tab.swift */; };
 		433AC1FD27FE746800C617E7 /* SoomshimUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AC1F827FE746800C617E7 /* SoomshimUIApp.swift */; };
 		433AC20327FE74A700C617E7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AC20227FE74A700C617E7 /* Color.swift */; };
-		437394BE2803AEB00058B53C /* FriendsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437394BD2803AEB00058B53C /* FriendsListView.swift */; };
-		437394C52803AEDB0058B53C /* FriendsName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437394C02803AEDB0058B53C /* FriendsName.swift */; };
 		437394C62803AEDB0058B53C /* FriendsListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437394C12803AEDB0058B53C /* FriendsListPage.swift */; };
-		437394C72803AEDB0058B53C /* FriendsSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437394C22803AEDB0058B53C /* FriendsSearchBar.swift */; };
-		437394C82803AEDB0058B53C /* FriendsProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437394C32803AEDB0058B53C /* FriendsProfile.swift */; };
 		437394C92803AEDB0058B53C /* FriendsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437394C42803AEDB0058B53C /* FriendsList.swift */; };
 		4A3226CB2802A18500DFB348 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3226CA2802A18500DFB348 /* Story.swift */; };
 		4A3226CD2802A19B00DFB348 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3226CC2802A19B00DFB348 /* User.swift */; };
@@ -44,6 +40,7 @@
 		4A912CE427FFE7A900AB69EB /* MyWritingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A912CDF27FFE7A900AB69EB /* MyWritingCard.swift */; };
 		4A912CE527FFE7A900AB69EB /* ReplyToWriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A912CE027FFE7A900AB69EB /* ReplyToWriting.swift */; };
 		4A912CE627FFE7A900AB69EB /* MyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A912CE127FFE7A900AB69EB /* MyPage.swift */; };
+		4ABF58C22804734300BA07A0 /* FriendRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABF58C12804734300BA07A0 /* FriendRequest.swift */; };
 		4AEEB23A2803B8A400454601 /* SoomswimURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEEB2342803B8A400454601 /* SoomswimURL.swift */; };
 		4AEEB23B2803B8A400454601 /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEEB2352803B8A400454601 /* DataType.swift */; };
 		4AEEB23C2803B8A400454601 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEEB2362803B8A400454601 /* NetworkService.swift */; };
@@ -52,6 +49,8 @@
 		4AEEB23F2803B8A400454601 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEEB2392803B8A400454601 /* RequestFactory.swift */; };
 		8406950C27FE7602006934C5 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406950B27FE7602006934C5 /* Login.swift */; };
 		8493936C27FF3D7D00D186E4 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493936B27FF3D7D00D186E4 /* LaunchScreen.swift */; };
+		AF38078D2803C179007F2F73 /* Posting-key.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38078C2803C179007F2F73 /* Posting-key.swift */; };
+		84DBDF3B2803D95E00D7D76D /* Posting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBDF3A2803D95E00D7D76D /* Posting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,11 +66,7 @@
 		433AC1F527FE746800C617E7 /* Tab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		433AC1F827FE746800C617E7 /* SoomshimUIApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoomshimUIApp.swift; sourceTree = "<group>"; };
 		433AC20227FE74A700C617E7 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		437394BD2803AEB00058B53C /* FriendsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListView.swift; sourceTree = "<group>"; };
-		437394C02803AEDB0058B53C /* FriendsName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsName.swift; sourceTree = "<group>"; };
 		437394C12803AEDB0058B53C /* FriendsListPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListPage.swift; sourceTree = "<group>"; };
-		437394C22803AEDB0058B53C /* FriendsSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsSearchBar.swift; sourceTree = "<group>"; };
-		437394C32803AEDB0058B53C /* FriendsProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsProfile.swift; sourceTree = "<group>"; };
 		437394C42803AEDB0058B53C /* FriendsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsList.swift; sourceTree = "<group>"; };
 		4A3226CA2802A18500DFB348 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		4A3226CC2802A19B00DFB348 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -94,6 +89,7 @@
 		4A912CDF27FFE7A900AB69EB /* MyWritingCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWritingCard.swift; sourceTree = "<group>"; };
 		4A912CE027FFE7A900AB69EB /* ReplyToWriting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplyToWriting.swift; sourceTree = "<group>"; };
 		4A912CE127FFE7A900AB69EB /* MyPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPage.swift; sourceTree = "<group>"; };
+		4ABF58C12804734300BA07A0 /* FriendRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequest.swift; sourceTree = "<group>"; };
 		4AEEB2342803B8A400454601 /* SoomswimURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoomswimURL.swift; sourceTree = "<group>"; };
 		4AEEB2352803B8A400454601 /* DataType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
 		4AEEB2362803B8A400454601 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -102,6 +98,8 @@
 		4AEEB2392803B8A400454601 /* RequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		8406950B27FE7602006934C5 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		8493936B27FF3D7D00D186E4 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		AF38078C2803C179007F2F73 /* Posting-key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Posting-key.swift"; sourceTree = "<group>"; };
+		84DBDF3A2803D95E00D7D76D /* Posting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +131,6 @@
 				433AC1F427FE746800C617E7 /* Header.swift */,
 				433AC1F527FE746800C617E7 /* Tab.swift */,
 				4A619B352801BFE10075FD27 /* ViewRouter.swift */,
-				437394BD2803AEB00058B53C /* FriendsListView.swift */,
 				433AC1F827FE746800C617E7 /* SoomshimUIApp.swift */,
 			);
 			path = Global;
@@ -152,9 +149,6 @@
 			children = (
 				437394C42803AEDB0058B53C /* FriendsList.swift */,
 				437394C12803AEDB0058B53C /* FriendsListPage.swift */,
-				437394C02803AEDB0058B53C /* FriendsName.swift */,
-				437394C32803AEDB0058B53C /* FriendsProfile.swift */,
-				437394C22803AEDB0058B53C /* FriendsSearchBar.swift */,
 			);
 			path = FriendsList;
 			sourceTree = "<group>";
@@ -166,6 +160,7 @@
 				4A3226CC2802A19B00DFB348 /* User.swift */,
 				37D718472804691300C346BB /* RepliesInfo.swift */,
 				37D7184928046F0D00C346BB /* Reply.swift */,
+				4ABF58C12804734300BA07A0 /* FriendRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,6 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				4A68F45527FBF35F0015639B /* Key.swift */,
+				AF38078C2803C179007F2F73 /* Posting-key.swift */,
+				84DBDF3A2803D95E00D7D76D /* Posting.swift */,
 			);
 			path = Key;
 			sourceTree = "<group>";
@@ -367,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF38078D2803C179007F2F73 /* Posting-key.swift in Sources */,
 				4AEEB23D2803B8A400454601 /* HTTPMethod.swift in Sources */,
 				4A912CD427FFE6F600AB69EB /* PostInputView.swift in Sources */,
 				4A912CE527FFE7A900AB69EB /* ReplyToWriting.swift in Sources */,
@@ -374,12 +372,12 @@
 				433AC1F127FE745100C617E7 /* Feed.swift in Sources */,
 				37D718482804691300C346BB /* RepliesInfo.swift in Sources */,
 				37D7184A28046F0D00C346BB /* Reply.swift in Sources */,
+				84DBDF3B2803D95E00D7D76D /* Posting.swift in Sources */,
 				433AC1EF27FE745100C617E7 /* Profile.swift in Sources */,
 				4A68F45627FBF35F0015639B /* Key.swift in Sources */,
-				437394C82803AEDB0058B53C /* FriendsProfile.swift in Sources */,
 				437394C62803AEDB0058B53C /* FriendsListPage.swift in Sources */,
 				437394C92803AEDB0058B53C /* FriendsList.swift in Sources */,
-				437394C52803AEDB0058B53C /* FriendsName.swift in Sources */,
+				4ABF58C22804734300BA07A0 /* FriendRequest.swift in Sources */,
 				4A912CE427FFE7A900AB69EB /* MyWritingCard.swift in Sources */,
 				8493936C27FF3D7D00D186E4 /* LaunchScreen.swift in Sources */,
 				4A619B382801DE880075FD27 /* DataLoader.swift in Sources */,
@@ -402,13 +400,11 @@
 				433AC1F927FE746800C617E7 /* Header.swift in Sources */,
 				433AC1EE27FE745100C617E7 /* StoryContentPreview.swift in Sources */,
 				433AC1FA27FE746800C617E7 /* Tab.swift in Sources */,
-				437394BE2803AEB00058B53C /* FriendsListView.swift in Sources */,
 				4A68F45427FBF34E0015639B /* Dinner.swift in Sources */,
 				433AC1FD27FE746800C617E7 /* SoomshimUIApp.swift in Sources */,
 				4A912CD927FFE70100AB69EB /* PostInputFinalView.swift in Sources */,
 				433AC1F027FE745100C617E7 /* StoryPreview.swift in Sources */,
 				4A3226CB2802A18500DFB348 /* Story.swift in Sources */,
-				437394C72803AEDB0058B53C /* FriendsSearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
