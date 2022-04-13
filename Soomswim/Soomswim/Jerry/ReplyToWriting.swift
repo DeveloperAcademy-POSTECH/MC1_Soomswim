@@ -27,6 +27,7 @@ struct ReplyToWritingView: View{
     var body: some View {
         ZStack{
             Color.backgroundGradient
+                .edgesIgnoringSafeArea([.bottom])
             ScrollView{
                 VStack(alignment: .leading, spacing: 40){
                     Text("\(self.date) \n답장이 도착했습니다.")

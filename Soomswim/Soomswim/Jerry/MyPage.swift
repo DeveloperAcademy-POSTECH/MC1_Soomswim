@@ -35,7 +35,7 @@ struct MyPageView: View {
                         Spacer()
                         VStack {
                             Text("친구")
-                                .foregroundColor(Color.mainOrange)
+                                .foregroundColor(Color.pointPurple)
                                 .font(Font.system(size: 15, weight: .semibold))
                                 .padding(.bottom, 4)
                             NavigationLink(destination: FriendsListPage(name: self.name)) {

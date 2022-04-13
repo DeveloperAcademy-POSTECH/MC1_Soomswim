@@ -42,6 +42,6 @@ extension Color {
                  Color(red: 232/255, green: 211/255, blue: 59/255)], startPoint: .topLeading, endPoint: .bottomTrailing)
     ]
     static let backgroundGradient = LinearGradient(
-        colors: [Color.mainPurple, Color.subPurple, .black],
+        colors: [Color.mainPurple, Color.pointPurple, Color.subPurple, .black],
         startPoint: .topLeading ,endPoint: .bottomTrailing)
 }
