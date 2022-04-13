@@ -25,7 +25,7 @@ struct Feed: View {
                    stories.count > 0 {
                     ForEach(Array(zip(Array(0..<stories.count), stories)), id: \.0, content: { (idx, story) in
                         if idx != 0 { Seperator() }
-                        NavigationLink(destination: Posting(story: story)) {
+                        NavigationLink(destination: Posting(name: $name, story: story)) {
                             switch idx % 2 == 0 {
                             case true : StoryPreview1(story: story)
                             case false : StoryPreview2(story: story)
