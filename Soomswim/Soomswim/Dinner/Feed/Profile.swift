@@ -15,7 +15,7 @@ struct Profile: View {
                 .frame(width: 65.24, height: 65.24, alignment: .center)
                 .clipShape(Circle())
                 .overlay(Circle()
-                    .strokeBorder(LinearGradient(gradient: Gradient(colors: [Color.mainOrange, Color.mainMidOrange, Color.mainGreen]), startPoint: UnitPoint.topLeading, endPoint: UnitPoint.bottomTrailing), lineWidth: 2.34))
+                    .strokeBorder(LinearGradient(gradient: Gradient(colors: [Color.mainPurple, Color.pointPurple]), startPoint: .top, endPoint: .bottom), lineWidth: 2.34))
         }
     }
 }

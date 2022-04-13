@@ -25,6 +25,7 @@ struct ReplyDetailView: View{
     var body: some View {
         ZStack{
             Color.backgroundGradient
+                .edgesIgnoringSafeArea([.bottom])
             VStack(alignment: .leading){
                 Text("\(date) \n답장이 도착했습니다.")
                     .font(Font.system(size: 25, weight: .semibold))

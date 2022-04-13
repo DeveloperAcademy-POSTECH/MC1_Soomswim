@@ -10,13 +10,15 @@ import SwiftUI
 struct Posting: View {
     private let story: Story2
     @ObservedObject private var detailStory: DataLoader<Story2>
+    @Binding private var name: String
     
     // 댓글쓰기 팝업을 위한 변수
     @State private var popUp: Bool = false
     @State private var text: String = "여기에 답장을 남겨주세요"
     @State var nickname = ""
     
-    init(story: Story2) {
+    init(name: Binding<String>, story: Story2) {
+        self._name = name
         self.story = story
         self.detailStory = DataLoader<Story2>()
         self.contents()
@@ -34,7 +36,6 @@ struct Posting: View {
                             .lineSpacing(10)
                     }
                 }
-                // 수정필요: 이름 받아와야 함
                 PostingFooter(popUp: $popUp)
                     .frame(width: nil, height: nil, alignment: .bottom)
             }
@@ -52,7 +53,7 @@ struct Posting: View {
                         HStack {
                             Spacer()
                             Button(action: {
-                                // 수정필요: back-end 붙이기
+                                self.postReply()
                                 print("답장 작성 clicked")
                             }) {
                                 Text("보내기")
@@ -66,10 +67,16 @@ struct Posting: View {
                             .padding(.all, 20)
                             }
                         }
-                        // 수정필요: 게시글 작성자 name 넣어야 함
-                        Text("To. Eddy")
-                            .font(.system(size: 21, weight: .heavy))
-                            .frame(width: 300, height: nil, alignment: .leading)
+                        if let detailStory = self.detailStory.data{
+                            Text("To. \(detailStory.writer.name)")
+                                .font(.system(size: 21, weight: .heavy))
+                                .frame(width: 300, height: nil, alignment: .leading)
+                        } else {
+                            Text("To. ")
+                                .font(.system(size: 21, weight: .heavy))
+                                .frame(width: 300, height: nil, alignment: .leading)
+                        }
+                        
                         
                         TextEditor(text: self.$text)
                             .foregroundColor(self.text == "여기에 답장을 남겨주세요" ? .gray : .primary)
@@ -109,5 +116,14 @@ struct Posting: View {
         else { return print("no contents") }
 
         self.detailStory.fill(data: story)
+    }
+    
+    private func postReply() {
+        guard let request = try? RequestFactory(url: SoomswimURL.reply).request(params: ["writer": self.nickname, "content": self.text, "sender": self.name, "story": self.story.id]) else { return print("error") }
+        NetworkService().request(request, handler: postAccepted)
+    }
+    
+    private func postAccepted(data: Response<String>, response: URLResponse?) -> Void{
+        self.popUp = false
     }
 }
