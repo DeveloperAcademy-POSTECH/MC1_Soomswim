@@ -27,6 +27,7 @@ struct FriendsListPage: View {
                         .padding(.leading, 14.5)
                     Spacer()
                 }
+                .padding(.top, 10)
                 ScrollView {
                     if let data = self.friendRequests.data {
                         ForEach(data, content: { request in
@@ -94,7 +95,6 @@ struct FriendsListPage: View {
                 Image(systemName: "plus")
                     .foregroundColor(Color.gray)
             })
-            .padding(.trailing, 14.5)
         }
     }
     
