@@ -61,7 +61,7 @@ struct FriendsList: View {
           }
           
       }
-      .padding(.horizontal, 38.0)
+      .padding(.horizontal, 15.0)
       .frame(width: nil, height: 80, alignment: .center)
     }
     
