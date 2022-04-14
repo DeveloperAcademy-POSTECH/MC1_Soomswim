@@ -52,19 +52,19 @@ struct Posting: View {
                     VStack {
                         HStack {
                             Spacer()
-                            Button(action: {
-                                self.postReply()
-                                print("답장 작성 clicked")
-                            }) {
-                                Text("보내기")
-                                    .foregroundColor(Color.blue)
-                            }
+                            
                             Button(action: {
                                 self.popUp = false
                             }) {
                                 Text("취소")
                                     .foregroundColor(Color.black)
-                            .padding(.all, 20)
+                            }
+                            Button(action: {
+                                self.postReply()
+                                print("답장 작성 clicked")
+                            }) {
+                                Text("보내기")
+                                .padding(.all, 20)
                             }
                         }
                         if let detailStory = self.detailStory.data{
