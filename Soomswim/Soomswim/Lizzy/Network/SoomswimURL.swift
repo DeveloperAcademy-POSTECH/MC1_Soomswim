@@ -20,6 +20,7 @@ enum SoomswimURL: String {
     case repliesreply = "replies/reply"
     case replies = "replies"
     case friends = "friends"
+    case mypageFriends = "mypage/friends"
     
     private func URL() -> String {
         let domain = "3.39.28.43"
@@ -30,7 +31,7 @@ enum SoomswimURL: String {
         switch self {
         case .login, .mypageStroy, .reply, .friendRequest, .friendResponse :
             return Post(url: self.URL())
-        case .stories, .mypageStories, .story, .repliesreply, .replies, .friends :
+        case .stories, .mypageStories, .story, .repliesreply, .replies, .friends, .mypageFriends :
             return Get(url: self.URL())
         }
     }
