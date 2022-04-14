@@ -33,9 +33,8 @@ struct FriendsList: View {
               }) {
                   Text("삭제")
                       .font(Font.system(size: 15, weight: .semibold))
-                      .foregroundColor(Color.mainOrange)
+                      .foregroundColor(.red)
               }
-              .accentColor(Color.FriendsListBlue)
           case .requested :
               Button(action: {
                   self.reject()
@@ -44,13 +43,12 @@ struct FriendsList: View {
                       .font(Font.system(size: 15, weight: .semibold))
                       .foregroundColor(Color.gray)
               }
-              .accentColor(Color.FriendsListBlue)
               Button(action: {
                   self.accept()
               }) {
                   Text("수락")
                       .font(Font.system(size: 15, weight: .semibold))
-                      .foregroundColor(Color.black)
+                      .foregroundColor(.blue)
               }
           case .deleted :
               Button(action: {
@@ -58,9 +56,8 @@ struct FriendsList: View {
               }) {
                   Text("요청")
                       .font(Font.system(size: 15, weight: .semibold))
-                      .foregroundColor(Color.mainOrange)
+                      .foregroundColor(.red)
               }
-              .accentColor(Color.FriendsListBlue)
           }
           
       }

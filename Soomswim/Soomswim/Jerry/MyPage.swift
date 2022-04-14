@@ -10,11 +10,14 @@ import SwiftUI
 struct MyPageView: View {
     @Binding private var name: String
     @ObservedObject private var mystories: DataLoader<Array<Story2>>
-
+    @ObservedObject private var myFriendsCount: DataLoader<Int>
+    
     init(name: Binding<String>) {
         self._name = name
         self.mystories = DataLoader<Array<Story2>>()
+        self.myFriendsCount = DataLoader<Int>()
         self.contents()
+        self.getFriendsCount()
     }
     
     let columns = [
@@ -39,7 +42,7 @@ struct MyPageView: View {
                                 .font(Font.system(size: 15, weight: .semibold))
                                 .padding(.bottom, 4)
                             NavigationLink(destination: FriendsListPage(name: self.name)) {
-                                Text("00")
+                                Text("\(self.myFriendsCount.data ?? 0)")
                                     .foregroundColor(Color(uiColor: UIColor.systemGray))
                                     .font(Font.system(size: 13, weight: .medium))
                             }
@@ -88,6 +91,19 @@ struct MyPageView: View {
         else { return print("no contents") }
         self.mystories.fill(data: mystories)
     }
+    
+    private func getFriendsCount() {
+        guard let request = try? RequestFactory(url: SoomswimURL.mypageFriends).request(params: ["name": self.name]) else { return print("error") }
+        NetworkService().request(request, handler: fillMyFriendsCount)
+    }
+    
+    private func fillMyFriendsCount(data: Response<Int>, response: URLResponse?) {
+        guard (response as? HTTPURLResponse)?.statusCode == 200,
+              let myfriendscount = data.data
+        else { return print("no contents") }
+        self.myFriendsCount.fill(data: myfriendscount)
+    }
+    
 }
 
 struct MyPageView_Previews: PreviewProvider {

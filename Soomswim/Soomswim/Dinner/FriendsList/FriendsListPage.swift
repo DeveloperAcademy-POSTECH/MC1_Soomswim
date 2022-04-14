@@ -37,7 +37,7 @@ struct FriendsListPage: View {
             }
             if self.offer {
                 ZStack {
-                    Rectangle()
+                    RoundedRectangle(cornerRadius: 12)
                         .shadow(color: Color.gray, radius: 5)
                         .foregroundColor(Color.white)
                         .frame(width: 300, height: 500, alignment: .center)
@@ -52,7 +52,7 @@ struct FriendsListPage: View {
                                     .foregroundColor(Color.gray)
                                     .frame(width: 17, height: 17)
                             }
-                            .padding(.trailing, 5)
+                            .padding(.trailing, 10)
                             .padding(.top, 10)
                         }
                         .padding(.bottom, 50)
@@ -60,15 +60,17 @@ struct FriendsListPage: View {
                         TextField("Username", text: self.$friendName)
                             .padding(10)
                             .frame(width: 200, height: 50, alignment: .center)
-                            .border(.gray, width: 1)
-                            .cornerRadius(10)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(.gray, lineWidth: 1)
+                            )
                         Button(action: {
                             self.follow()
                         }) {
                             ZStack {
                                 Rectangle()
                                     .frame(width: 200, height: 50, alignment: .center)
-                                    .foregroundColor(Color.mainOrange)
+                                    .foregroundColor(Color.pointPurple)
                                     .cornerRadius(10)
                                 Text("친구 요청")
                                     .foregroundColor(Color.white)

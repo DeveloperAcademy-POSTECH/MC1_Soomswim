@@ -68,7 +68,10 @@ struct PostInputView: View {
                   }
                 }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 800)
-            .border(Color.gray, width: 1)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(.gray, lineWidth: 1)
+            )
             .font(.system(size:15, weight: .regular))
             .lineSpacing(2.5)
             .multilineTextAlignment(.center)
@@ -91,7 +94,7 @@ struct PostInputView: View {
                     }
                     .imageScale(.medium)
                     .font(.title3)
-                    .foregroundColor(.orange)
+                    .foregroundColor(.pointPurple)
                     
                     Button(action: {
                         guard let request = try? RequestFactory(url: SoomswimURL.mypageStroy).request(params: ["writer": self.name, "content": self.text]) else { return print("error") }
@@ -99,7 +102,7 @@ struct PostInputView: View {
                     }) {
                         Text("완료")
                     }
-                    .foregroundColor(.orange)
+                    .foregroundColor(.pointPurple)
                     .font(.body)
                 }
             }
